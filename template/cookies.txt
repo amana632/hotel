@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.iamabdus.com	TRUE	/	FALSE	1999999999	__cfduid	d89e7af701794e21faf15b1c0e422da611534777429
+
