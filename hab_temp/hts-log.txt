@@ -1,0 +1,30 @@
+HTTrack3.48-21 launched on Sat, 29 Sep 2018 13:43:27 at http://lecker.maskandesign.com/html/01_02_bbq.html
+(httrack http://lecker.maskandesign.com/html/01_02_bbq.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.eot (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.eot? (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.woff2 (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.woff (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.ttf (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/fonts/glyphicons-halflings-regular.svg (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/css/owl.video.play.png (from lecker.maskandesign.com/html/css/lecker_library.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/sea/white_rough_edge_bottom.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/sea/white_rough_edge_top.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/sea/white_rough_edge_bottom_bl.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/sea/white_rough_edge_top_bl.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/selima_gold_retina.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/macbook2.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/lec_desktop.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/lec_mobile_header.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:10	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/lec_tablet_header.png (from lecker.maskandesign.com/html/css/lecker_style.css)
+14:07:15	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/images/RESTA/shutterstock_429510046.jpg (from lecker.maskandesign.com/html/01_09_pizza.html)
+14:07:17	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/GET (from lecker.maskandesign.com/html/js/lecker_library.js)
+14:07:17	Error: 	"Not Found" (404) at link lecker.maskandesign.com/html/Popover requires tooltip.js (from lecker.maskandesign.com/html/js/lecker_library.js)
+
+HTTrack Website Copier/3.48-21 mirror complete in 23 minutes 50 seconds : 237 links scanned, 217 files written (36983966 bytes overall) [35459631 bytes received at 24796 bytes/sec], 2453447 bytes transferred using HTTP compression in 35 files, ratio 34%, 2.0 requests per connection
+(19 errors, 0 warnings, 0 messages)
