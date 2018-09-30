@@ -40,6 +40,8 @@
             height: 550px;
             margin: 0 auto 100px;
             background: #fff;
+            border-radius: 5%;
+
         }
 
         .form {
@@ -50,6 +52,7 @@
             transition: transform 1.2s ease-in-out;
             transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
             padding: 50px 30px 0;
+            /* border: 10px solid black; */
         }
 
         .sub-cont {
@@ -318,6 +321,7 @@
     </p>
     <div class="cont">
         <div class="form sign-in">
+            <form action="#">
             <h2>Welcome back</h2>
             <label>
                 <span>Email</span>
@@ -327,11 +331,14 @@
                 <span>Password</span>
                 <input type="password" />
             </label>
-            <p class="forgot-pass">Forgot password?</p>
+            <center>
+                <a href="#" class="forgot-pass">Forgot password?</a>
+            </center>
             <button type="button" class="submit">Sign In</button>
             <button type="button" class="fb-btn">Connect with
                 <span>facebook</span>
             </button>
+        </form>
         </div>
         <div class="sub-cont">
             <div class="img">
@@ -348,7 +355,8 @@
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
-            <div class="sign-up" style="display:inline; height:800px, width: 70px">
+            <div class="sign-up" style="display:inline;">
+                <br>
                 <h2>Time to feel like home,</h2>
 
                 <!-- <form action="/action_page.php" method="post" target="_blank">
@@ -378,16 +386,17 @@
                         <span>Phone-no:</span>
                         <input type="number" name="phone" />
                     </label>
+                    <br>
                     <label>
                         <!-- <span>Type</span> -->
                         <select id="inputState" class="form-control" name="user_type">
-                            <option selected>Type</option>
+                            <!-- <option selected>Type</option> -->
                             <option>
                                 Mercant
                             </option>
-                            <option>
+                            <!-- <option>
                                 Waiter
-                            </option>
+                            </option> -->
                             <option>
                                 Customer
                             </option>
@@ -396,9 +405,7 @@
                     <!-- <label>
                         
                     </label> -->
-                    <button>
-                        <input type="submit" value="Submit">
-                    </button>
+                    <button type="button" value="Submit" class="submit">Submit</button>
 
                     <!-- <button type="button" value="Submit" class="submit">Sign Up</button>
                     <button type="button" class="fb-btn">Join with
@@ -444,29 +451,30 @@
         </div>
     </div>
 
-    <a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+    <!-- <a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
         <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
     </a>
     <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
         <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
-    </a>
+    </a> -->
 
 
 
 
 
 
-    <script>document.querySelector('.img__btn').addEventListener('click', function () {
+    <script>
+    document.querySelector('.img__btn').addEventListener('click', function () {
             document.querySelector('.cont').classList.toggle('s--signup');
-        });</script>
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
-<div class="dropdown">
+<!-- <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         Dropdown button
@@ -476,4 +484,4 @@
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
     </div>
-</div>
+</div> -->
