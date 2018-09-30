@@ -4,6 +4,63 @@ from main.model import Table, TableSchema, table_schema, tables_schema, User, us
 from flask_marshmallow import Marshmallow
 from main import db
 
+
+
+
+@app.route("/")
+def func():
+    return "working"
+    
+# endpoint to create new hotels
+@app.route("/hotels", methods=["POST"])
+def add_hotels():
+    user_id = request.form['user_id']
+    hotel_name = request.form['hotel_name']
+    hotel_pic = request.form['hotel_pic']
+    hotel_address = request.form['hotel_address']
+    hotel_email = request.form['hotel_email']
+    contact = request.form['contact'] 
+    hotel_lat = request.form['hotel_lat']
+    hotel_long = request.form['hotel_long']
+    opening_time = request.form['opening_time']
+    closing_time = request.form['closing_time']
+    hotel_desc = request.form['hotel_desc']
+    special_monday = request.form['special_monday']
+    special_tuesday = request.form['special_tuesday']
+    special_wednesday = request.form['special_wednesday']
+    special_thursday = request.form['special_thursday']
+    special_friday = request.form['special_friday']
+    special_saturday = request.form['special_saturday']
+    special_sunday = request.form['special_sunday']
+    bestsellers = request.form['bestsellers']
+    no_waiter = request.form['no_waiter']
+    no_twoseater = request.form['no_twoseater']
+    no_fourseater = request.form['no_fourseater']
+    no_sixseater = request.form['no_sixseater']
+    no_eightseater = request.form['no_eightseater']
+
+    new_hotel = Hotel(user_id, hotel_name, hotel_pic, hotel_address, hotel_email, contact, hotel_lat, hotel_long, opening_time, closing_time, hotel_desc, special_monday, special_tuesday, special_wednesday, special_thursday, special_friday, special_saturday, special_sunday, bestsellers, no_waiter, no_twoseater, no_fourseater, no_sixseater, no_eightseater)
+
+    db.session.add(new_hotel)
+    db.session.commit()
+    return jsonify(new_hotel)
+
+# endpoint to show all hotelss
+@app.route("/hotels", methods=["GET"])
+def get_hotels():
+    all_hotels = Hotel.query.all()
+    result = hotels_schema.dump(all_hotels)
+    return jsonify(result.data)
+
+
+# endpoint to get hotels detail by id
+@app.route("/hotels/<id>", methods=["GET"])
+def hotels_detail(id):
+    hotels = Hotel.query.get(id)
+    return hotels_schema.jsonify(hotels)
+
+
+# endpoint to create new user
 @app.route("/user", methods=["POST"])
 def add_user():
     user_name = request.form['username']
@@ -20,12 +77,7 @@ def add_user():
     db.session.commit()
     return jsonify(new_user)
 
-
-
-@app.route("/")
-def func():
-    return "working"
-    
+# endpoint to check whether user is already is registered
 @app.route("/isRegisteredUser/<phone>", methods=["GET"])
 def isRegisteredUser(phone):
     data = User.query.filter_by(phone= phone).first()
@@ -34,13 +86,12 @@ def isRegisteredUser(phone):
     else :
         return jsonify("True")
 
+# endpoint to check whether user is already is valid
 @app.route("/isValidUser", methods=["GET"])
 def isValidUser():
     phone = request.args['phone']
     password = request.args['password']
     user_type = request.args['user_type']
-
-
 
     data = User.query.filter_by(phone= phone).first()
     # return user_schema.jsonify(data)
@@ -57,6 +108,101 @@ def get_user():
     all_users = User.query.all()
     result = users_schema.dump(all_users)
     return jsonify(result.data)
+
+# endpoint to add a new waiter
+@app.route("/waiter", methods=["POST"])
+def add_waiter():
+    user_id = request.form['user_id']
+    hotel_id = request.form['hotel_id']
+    order_id = request.form['order_id']
+    waiter_status = request.form['waiter_status']
+    transaction_id = request.form['transaction_id']
+
+    new_waiter = Waiter(user_id, hotel_id, order_id, waiter_status, transaction_id)
+
+    db.session.add(new_waiter)
+    db.session.commit()
+
+    return jsonify(new_waiter)
+
+
+# endpoint to add a new chef
+@app.route("/chef", methods=["POST"])
+def add_chef():
+    hotel_id = request.form['hotel_id']
+    user_id = request.form['user_id']
+    order_id = request.form['order_id']
+    status = request.form['status']
+
+    new_chef = Chef(hotel_id, user_id, order_id, status)
+
+    db.session.add(new_chef)
+    db.session.commit()
+
+    return jsonify(new_chef)
+
+# endpoint to give id to tables
+@app.route("/table", methods=["POST"])
+def add_table():
+    hotel_id = request.form['hotel_id']
+    status = request.form['status']
+
+    new_table = Table(hotel_id, status)
+
+    db.session.add(new_table)
+    db.session.commit()
+
+    return jsonify(new_table)
+
+#endpoint to post the menu
+@app.route("/menu", methods=["POST"])
+def add_menu():
+    hotel_id = request.form['hotel_id']
+    item_name = request.form['item_name']
+    item_price = request.form['item_price']
+    item_type = request.form['item_type']
+    item_status = request.form['item_status']
+
+    new_menu = Menu(hotel_id, item_name, item_price, item_type, item_status)
+
+    db.session.add(new_menu)
+    db.session.commit()
+
+    return jsonify(new_menu)
+
+#endpoint to make a booking
+@app.route("/booking", methods=["POST"])
+def make_booking():
+    user_id = request.form['user_id']
+    hotel_id = request.form['hotel_id']
+    table_id = request.form['table_id']
+    waiter_id = request.form['waiter_id']
+    checkin = request.form['checkin']
+    date_time =  request.form['date_time']
+
+    new_booking = Booking(user_id, hotel_id, table_id, waiter_id, checkin, date_time)
+
+    db.session.add(new_booking)
+    db.session.commit()
+
+    return jsonify(new_booking)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -245,50 +391,8 @@ def get_user():
 
 #     return user_schema.jsonify(waiter)
 
-# # endpoint to create new hotels
-# @app.route("/hotels", methods=["POST"])
-# def add_hotels():
-#     hotel_id = request.form['hotel_id']
-#     hotel_name = request.form['hotel_name']
-#     hotel_address = request.form['hotel_address']
-#     hotel_open = request.form['hotel_open']
-#     hotel_moreinfo = request.form['hotel_moreinfo']
-#     hotel_phone = request.form['hotel_phone']
-#     hotel_email = request.form['hotel_email']
-#     hotel_lat = request.form['hotel_lat']
-#     hotel_long = request.form['hotel_long']
-#     hotel_capacity = request.form['hotel_capacity']
-#     hotel_desc = request.form['hotel_desc']
-#     hotel_stars = request.form['hotel_stars']
-#     hotel_menupic = request.form['hotel_menupic']
-#     hotel_close = request.form['hotel_close']
-#     hotel_hotelpic = request.form['hotel_hotelpic']
-#     hotel_avgcost = request.form['hotel_avgcost']
-    
-    
-    
-    
-#     new_hotels = Hotels(hotel_id, hotel_name,hotel_address,hotel_open,hotel_close,hotel_desc,hotel_stars,hotel_menupic,      hotel_hotelpic,hotel_avgcost,hotel_moreinfo,hotel_phone, hotel_email,hotel_lat, hotel_long,hotel_capacity)
-
-#     db.session.add(new_hotels)
-#     db.session.commit()
-
-#     return jsonify(new_hotels)
 
 
-# # endpoint to show all hotelss
-# @app.route("/hotels", methods=["GET"])
-# def get_hotels():
-#     all_hotelss = Hotels.query.all()
-#     result = hotelss_schema.dump(all_hotelss)
-#     return jsonify(result.data)
-
-
-# # endpoint to get hotels detail by id
-# @app.route("/hotels/<id>", methods=["GET"])
-# def hotels_detail(id):
-#     hotels = Hotels.query.get(id)
-#     return hotels_schema.jsonify(hotels)
 
 
 # # endpoint to update hotels

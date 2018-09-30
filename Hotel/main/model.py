@@ -57,7 +57,7 @@ class Payment(db.Model):
     payment_id = db.Column(db.Integer, primary_key = True)
     date_time =  db.Column(db.DateTime)
     amount = db.Column(db.Float)
-    mode = db.Column(db.String)
+    mode = db.Column(db.String(255))
     transaction_id = db.Column(db.Integer)
 
     def __init__(self, hotel_id, user_id, date_time, amount, mode, transaction_id):
@@ -83,14 +83,24 @@ class Hotel(db.Model):
     __tablename__='Hotel'
     hotel_id = db.Column(db.Integer,primary_key=True)
     user_id = db.Column(db.Integer)
-    hotel_name = db.Column(db.String(225))
-    hotel_address = db.Column(db.String(225))
-    contact = db.Column(db.String(225)) 
+    hotel_name = db.Column(db.String(255))
+    hotel_pic = db.Column(db.String(255))
+    hotel_address = db.Column(db.String(255))
+    hotel_email = db.Column(db.String(255))
+    contact = db.Column(db.String(255)) 
     hotel_lat = db.Column(db.Float)
     hotel_long = db.Column(db.Float)
     opening_time = db.Column(db.String(255))
     closing_time = db.Column(db.String(255))
-    hotel_desc = db.Column(db.String)
+    hotel_desc = db.Column(db.String(255))
+    special_monday = db.Column(db.String(255))
+    special_tuesday = db.Column(db.String(255))
+    special_wednesday = db.Column(db.String(255))
+    special_thursday = db.Column(db.String(255))
+    special_friday = db.Column(db.String(255))
+    special_saturday = db.Column(db.String(255))
+    special_sunday = db.Column(db.String(255))
+    bestsellers = db.Column(db.String(255))
     no_waiter = db.Column(db.Integer)
     no_twoseater = db.Column(db.Integer)
     no_fourseater = db.Column(db.Integer)
@@ -98,16 +108,26 @@ class Hotel(db.Model):
     no_eightseater = db.Column(db.Integer)
   
 
-    def __init__(self, user_id, hotel_name, hotel_address, contact, hotel_lat, hotel_long, opening_time, closing_time, hotel_desc, no_waiter, no_twoseater, no_fourseater, no_sixseater, no_eightseater):
+    def __init__(self, user_id, hotel_name, hotel_pic, hotel_address, hotel_email, contact, hotel_lat, hotel_long, opening_time, closing_time, hotel_desc, special_monday, special_tuesday, special_wednesday, special_thursday, special_friday, special_saturday, special_sunday, bestsellers, no_waiter, no_twoseater, no_fourseater, no_sixseater, no_eightseater):
         self.user_id = user_id
         self.hotel_name = hotel_name
+        self.hotel_pic = hotel_pic
         self.hotel_address = hotel_address
+        self.hotel_email = hotel_email
         self.contact = contact
         self.hotel_lat = hotel_lat
         self.hotel_long = hotel_long
         self.opening_time = opening_time
         self.closing_time = closing_time
         self.hotel_desc = hotel_desc
+        self.special_monday = special_monday
+        self.special_tuesday = special_tuesday
+        self.special_wednesday = special_wednesday
+        self.special_thursday = special_thursday
+        self.special_friday = special_friday
+        self.special_saturday = special_saturday
+        self.special_sunday = special_sunday
+        self.bestsellers = bestsellers
         self.no_waiter = no_waiter
         self.no_twoseater = no_twoseater
         self.no_fourseater = no_fourseater
@@ -117,25 +137,23 @@ class Hotel(db.Model):
 class HotelSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('hotel_id', 'user_id', 'hotel_name', 'hotel_address', 'contact', 'hotel_lat', 'hotel_long', 'opening_time', 'closing_time', 'hotel_desc', 'no_waiter', 'no_twoseater', 'no_fourseater', 'no_sixseater', 'no_eightseater')
+        fields = ('hotel_id', 'user_id', 'user_id', 'hotel_name', 'hotel_pic', 'hotel_address', 'hotel_email', 'contact', 'hotel_lat', 'hotel_long', 'opening_time', 'closing_time', 'hotel_desc', 'special_monday', 'special_tuesday', 'special_wednesday', 'special_thursday', 'special_friday', 'special_saturday', 'special_sunday', 'bestsellers', 'no_waiter', 'no_twoseater', 'no_fourseater', 'no_sixseater', 'no_eightseater')
 
 hotel_schema = HotelSchema()
 hotels_schema= HotelSchema(many=True)
 
 class Menu(db.Model):
     __tablename__='Menu'
-    menu_id = db.Column(db.Integer, primary_key=True)
     hotel_id = db.Column(db.Integer)
     item_name = db.Column(db.String(255))
-    item_id = db.Column(db.Integer)
+    item_id = db.Column(db.Integer, primary_key=True)
     item_price = db.Column(db.Float)
     item_type = db.Column(db.String(225))
     item_status = db.Column(db.Boolean)
 
-    def __init__(self, hotel_id, item_name, item_id, item_price, item_type, item_status):
+    def __init__(self, hotel_id, item_name, item_price, item_type, item_status):
         self.hotel_id = hotel_id
         self.item_name = item_name
-        self.item_id = item_id
         self.item_price = item_price
         self.item_type = item_type
         self.item_status = item_status
@@ -143,7 +161,7 @@ class Menu(db.Model):
 class MenuSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('menu_id', 'hotel_id', 'item_name', 'item_id', 'item_price', 'item_type', 'item_status')
+        fields = ('hotel_id', 'item_name', 'item_id', 'item_price', 'item_type', 'item_status')
 
 menu_schema = MenuSchema()
 menus_schema = MenuSchema(many=True)
