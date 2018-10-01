@@ -319,43 +319,43 @@
     </p>
     <div class="cont">
         <div class="form sign-in">
-        <form action="http://127.0.0.1:8080/isValidUser">
-            <h2>Welcome back</h2>
-            <label>
-                <span>Phone Number</span>
-                <input type="number" name="phone" required/>
-            </label>
-            <label>
-                <span>Password</span>
-                <input type="password" name="password" required/>
-            </label>
-            <center>
-                <a href="#" class="forgot-pass">Forgot password?</a>
-            </center>
-            <br>
-            <label>
+            <form action="http://127.0.0.1:8080/isValidUser">
+                <h2>Welcome back</h2>
+                <label>
+                    <span>Phone Number</span>
+                    <input type="number" name="phone" required/>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" required/>
+                </label>
+                <center>
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                </center>
+                <br>
+                <label>
                     <span>User Type</span>
-                <select id="inputState" class="form-control" name="user_type">
-                    <option>
-                        Merchant
-                    </option>
-                    <option>
-                        Waiter
-                    </option>
-                    <option>
-                        Customer
-                    </option>
-                    <option>
-                        Chef
-                    </option>
-                </select>
-            </label>
-            
-            <button type="button" class="submit">Sign In</button>
-            <button type="button" class="fb-btn">Connect with
-                <span>facebook</span>
-            </button>
-        </form>
+                    <select id="inputState" class="form-control" name="user_type">
+                        <option>
+                            Merchant
+                        </option>
+                        <option>
+                            Waiter
+                        </option>
+                        <option>
+                            Customer
+                        </option>
+                        <option>
+                            Chef
+                        </option>
+                    </select>
+                </label>
+
+                <input type="submit" value="Submit" class="submit">
+                <button type="button" class="fb-btn">Connect with
+                    <span>facebook</span>
+                </button>
+            </form>
         </div>
         <div class="sub-cont">
             <div class="img">
@@ -425,7 +425,7 @@
                     <!-- <label>
                         
                     </label> -->
-                    <button type="button" value="Submit" class="submit">Submit</button>
+                    <input type="submit" value="Submit" class="submit">
 
                     <!-- <button type="button" value="Submit" class="submit">Sign Up</button>
                     <button type="button" class="fb-btn">Join with
@@ -484,7 +484,7 @@
 
 
     <script>
-    document.querySelector('.img__btn').addEventListener('click', function () {
+        document.querySelector('.img__btn').addEventListener('click', function () {
             document.querySelector('.cont').classList.toggle('s--signup');
         });
     </script>

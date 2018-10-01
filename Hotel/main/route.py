@@ -50,7 +50,7 @@ def add_hotels():
 def get_hotels():
     all_hotels = Hotel.query.all()
     result = hotels_schema.dump(all_hotels)
-    return jsonify(result.data)
+    return jsonify(a=result.data)
 
 
 # endpoint to get hotels detail by id
@@ -75,16 +75,16 @@ def add_user():
 
     db.session.add(new_user)
     db.session.commit()
-    return jsonify(new_user)
+    return user_schema.jsonify(new_user)
 
 # endpoint to check whether user is already is registered
 @app.route("/isRegisteredUser/<phone>", methods=["GET"])
 def isRegisteredUser(phone):
     data = User.query.filter_by(phone= phone).first()
     if (data.phone != phone) :
-        return jsonify("False")
+        return jsonify(a="False")
     else :
-        return jsonify("True")
+        return jsonify(a="True")
 
 # endpoint to check whether user is already is valid
 @app.route("/isValidUser", methods=["GET"])
@@ -97,9 +97,9 @@ def isValidUser():
     # return user_schema.jsonify(data)
 
     if(data.password == password and data.user_type == user_type) :
-        return jsonify("True")
+        return jsonify(a="True")
     else :
-        return jsonify("False")
+        return jsonify(a="False")
 
 
 # endpoint to show all users
@@ -107,7 +107,7 @@ def isValidUser():
 def get_user():
     all_users = User.query.all()
     result = users_schema.dump(all_users)
-    return jsonify(result.data)
+    return jsonify(a=result.data)
 
 # endpoint to add a new waiter
 @app.route("/waiter", methods=["POST"])
