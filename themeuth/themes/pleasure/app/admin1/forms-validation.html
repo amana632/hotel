@@ -13,7 +13,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobileF-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="stylesheet" href="../../assets/admin1/css/admin1.css">
@@ -28,6 +28,19 @@
 	<link rel="apple-touch-icon" href="../../assets/globals/img/icons/apple-touch-icon.png">
 
 	<script src="../../assets/globals/plugins/modernizr/modernizr.min.js"></script>
+
+	<!-- Start for clock -->
+
+<link rel="stylesheet" href="../../assets/globals/plugins/pnikolov-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="../../assets/globals/plugins/minicolors/jquery.minicolors.css">
+<link rel="stylesheet" href="../../assets/globals/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+<link rel="stylesheet" href="../../assets/globals/plugins/clockface/css/clockface.css">
+<link rel="stylesheet" href="../../assets/globals/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="../../assets/globals/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+
+<!-- End for clock-->
+
+
 </head>
 
 <body>
@@ -189,7 +202,7 @@
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<form action="#" class="form-horizontal parsley-validate">
+							<form action="http://127.0.0.1/hotels" class="form-horizontal parsley-validate">
 								<div class="form-body">
 									<div class="form-group">
 										<label class="control-label col-md-3">Hotel Name</label>
@@ -248,6 +261,99 @@
 											</div>
 										</div>
 									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">No Of Waiters :</label>
+										<div class="col-md-5">
+											<div class="inputer">
+												<div class="input-wrapper">
+													<input type="number" name="no_waiter" class="form-control" placeholder="ex: 1,2,3" required>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-md-3">Monday Special</label>
+										<div class="col-md-5">
+											<div class="inputer">
+												<div class="input-wrapper">
+													<input type="text" name="special_monday" class="form-control" placeholder="type something" required>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+											<label class="control-label col-md-3">Tuesday Special</label>
+											<div class="col-md-5">
+												<div class="inputer">
+													<div class="input-wrapper">
+														<input type="text" name="special_tuesday" class="form-control" placeholder="type something" required>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+												<label class="control-label col-md-3">Wednesday Special</label>
+												<div class="col-md-5">
+													<div class="inputer">
+														<div class="input-wrapper">
+															<input type="text" name="special_wednesday" class="form-control" placeholder="type something" required>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+													<label class="control-label col-md-3">Thursday Special</label>
+													<div class="col-md-5">
+														<div class="inputer">
+															<div class="input-wrapper">
+																<input type="text" name="special_thursday" class="form-control" placeholder="type something" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+														<label class="control-label col-md-3">Friday Special</label>
+														<div class="col-md-5">
+															<div class="inputer">
+																<div class="input-wrapper">
+																	<input type="text" name="special_friday" class="form-control" placeholder="type something" required>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+															<label class="control-label col-md-3">Saturday Special</label>
+															<div class="col-md-5">
+																<div class="inputer">
+																	<div class="input-wrapper">
+																		<input type="text" name="special_saturday" class="form-control" placeholder="type something" required>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+																<label class="control-label col-md-3">Sunday Special</label>
+																<div class="col-md-5">
+																	<div class="inputer">
+																		<div class="input-wrapper">
+																			<input type="text" name="special_sunday" class="form-control" placeholder="type something" required>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<label class="control-label col-md-3">Bestsellers </label>
+																<div class="col-md-5">
+																	<div class="inputer">
+																		<div class="input-wrapper">
+																			<input type="text" name="bestsellers" class="form-control" placeholder="type something" required>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+
 									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Hotel</label>
 										<div class="col-md-5">
@@ -281,23 +387,31 @@
 										</div>
 									</div> -->
 									<div class="form-group">
-										<label class="control-label col-md-3">Checkboxes</label>
+										<label class="control-label col-md-3">Types Of Seating</label>
 										<div class="col-md-5">
 											<div class="checkboxer">
-												<input type="checkbox" id="check1" name="checkboxes1" value="" data-parsley-mincheck="2">
-												<label for="check1">Option one</label>
+												<input type="checkbox" id="check1" value="" data-parsley-mincheck="2">
+												<label for="check1">2 Seater</label>
+												<input type="number" name="no_twoseater" class="form-control" placeholder="ex: 1,2,3" required>
 											</div>
 											<div class="checkboxer">
-												<input type="checkbox" id="check2" name="checkboxes1" value="">
-												<label for="check2">Option two</label>
+												<input type="checkbox" id="check2" value="">
+												<label for="check2">4 Seater</label>
+												<input type="number" name="no_fourseater" class="form-control" placeholder="ex: 1,2,3" required>
 											</div>
 											<div class="checkboxer">
-												<input type="checkbox" id="check3" name="checkboxes1" value="">
-												<label for="check3">Option three</label>
+												<input type="checkbox" id="check3" value="">
+												<label for="check3">6 Seater</label>
+												<input type="number" name="no_sixseater" class="form-control" placeholder="ex: 1,2,3" required>
 											</div>
+											<div class="checkboxer">
+													<input type="checkbox" id="check4" value="">
+													<label for="check4">8 Seater</label>
+													<input type="number" name="no_eightseater" class="form-control" placeholder="ex: 1,2,3" required>
+												</div>
 										</div>
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Radios</label>
 										<div class="col-md-5">
 											<div class="radioer">
@@ -313,8 +427,8 @@
 												<label for="radio3">Option three</label>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Selectbox</label>
 										<div class="col-md-5">
 											<select name="basic-selectbox" class="selecter" required="required">
@@ -324,7 +438,7 @@
 												<option value="4">4</option>
 											</select>
 										</div>
-									</div>
+									</div> -->
 									<div class="form-group">
 										<label class="control-label col-md-3">Description Of Hotel</label>
 										<div class="col-md-5">
@@ -335,7 +449,57 @@
 											</div>
 										</div>
 									</div>
-								</div>
+									<div class="form-group">
+											<!-- <div class="col-md-12">
+											<div class="panel">
+											<div class="panel-heading">
+											<div class="panel-title"><h4>TIME PICKERS</h4></div>
+											</div> -->
+										<!-- </div>  -->
+
+											<div class="panel-body">
+												<div class="row example-row">
+											<!-- <div class="col-md-3">In Input</div> -->
+													<label class="control-label col-md-3">In Time</label>
+														<div class="col-md-5">
+															<div class="inputer">
+																<div class="input-wrapper">
+																	<input type="text" name="opening_time" id="clockface1" value="2:30 PM" data-format="hh:mm A" class="form-control">
+																</div>
+															</div>
+														</div>
+												</div>
+									
+											<div class="row example-row">
+											<div class="control-label col-md-3">Out Time (click the Button)</div>
+											<div class="col-md-5">
+											<div class="input-group">
+											<div class="inputer">
+											<div class="input-wrapper">											<span id="clockface-toggle" class="input-group-addon">
+
+											<input type="text" name="closing_time" id="clockface2" value="14:30" class="form-control" readonly="">
+										</span>
+									</div>
+											</div>
+											</div>
+											</div>
+											</div>
+											<!-- <div class="row example-row"> -->
+											<!-- <div class="col-md-3">Inline</div> -->
+											<!-- <label class="control-label col-md-3">In Time</label> -->
+
+											<!-- <div class="col-md-9"> -->
+											<!-- <div id="clockface3" class="well" style="width: 210px;"></div> -->
+											<!-- </div>
+											</div> -->
+											</div>
+											</div>
+											</div>
+											</div>
+
+											
+
+
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
@@ -350,7 +514,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<div class="panel">
 					<div class="panel-heading">
@@ -396,7 +560,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- <div class="row">
 			<div class="col-md-12">
 				<div class="panel">
@@ -430,6 +594,8 @@
 				</div>
 			</div>
 		</div> -->
+		
+
 		<div class="footer-links margin-top-40">
 			<div class="row no-gutters">
 				<div class="col-xs-6 bg-brown">
@@ -1394,12 +1560,55 @@
 	<script src="../../assets/globals/js/pleasure.js"></script>
 
 	<script src="../../assets/admin1/js/layout.js"></script>
+	
+<script src="../../assets/globals/js/global-vendors.js"></script>
+
+
+<script src="../../assets/globals/plugins/pnikolov-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../assets/globals/plugins/minicolors/jquery.minicolors.min.js"></script>
+<script src="../../assets/globals/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../../assets/globals/plugins/clockface/js/clockface.js"></script>
+
+
+<script src="../../assets/globals/scripts/forms-pickers.js"></script>
+
+
+<script src="../../assets/globals/js/pleasure.js"></script>
+
+<script src="../../assets/admin1/js/layout.js"></script>
+<!-- Start of time app-->
+<script src="../../assets/globals/js/global-vendors.js"></script>
+
+
+<script src="../../assets/globals/plugins/pnikolov-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../assets/globals/plugins/minicolors/jquery.minicolors.min.js"></script>
+<script src="../../assets/globals/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../../assets/globals/plugins/clockface/js/clockface.js"></script>
+
+
+<script src="../../assets/globals/scripts/forms-pickers.js"></script>
+
+
+<script src="../../assets/globals/js/pleasure.js"></script>
+
+<script src="../../assets/admin1/js/layout.js"></script>
+
+<script>
+	$(document).ready(function () {
+		Pleasure.init();
+		Layout.init();
+		FormsPickers.init();
+	});
+	</script>
+<!-- End of time app-->
 
 	<script>
 		$(document).ready(function () {
 			Pleasure.init();
 			Layout.init();
 			FormsValidationsParsley.init();
+			Pleasure.init();
+			FormsPickers.init();
 		});
 	</script>
 

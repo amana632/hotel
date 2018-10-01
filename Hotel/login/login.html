@@ -313,27 +313,44 @@
 </head>
 
 <body>
-
-    <!--<p class="tip">Click on button in image container</p>-->
     <p>
         <br />
         <br />
     </p>
     <div class="cont">
         <div class="form sign-in">
-            <form action="#">
+        <form action="http://127.0.0.1:8080/isValidUser">
             <h2>Welcome back</h2>
             <label>
-                <span>Email</span>
-                <input type="email" />
+                <span>Phone Number</span>
+                <input type="number" name="phone" required/>
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" />
+                <input type="password" name="password" required/>
             </label>
             <center>
                 <a href="#" class="forgot-pass">Forgot password?</a>
             </center>
+            <br>
+            <label>
+                    <span>User Type</span>
+                <select id="inputState" class="form-control" name="user_type">
+                    <option>
+                        Merchant
+                    </option>
+                    <option>
+                        Waiter
+                    </option>
+                    <option>
+                        Customer
+                    </option>
+                    <option>
+                        Chef
+                    </option>
+                </select>
+            </label>
+            
             <button type="button" class="submit">Sign In</button>
             <button type="button" class="fb-btn">Connect with
                 <span>facebook</span>
@@ -392,13 +409,16 @@
                         <select id="inputState" class="form-control" name="user_type">
                             <!-- <option selected>Type</option> -->
                             <option>
-                                Mercant
+                                Merchant
                             </option>
-                            <!-- <option>
+                            <option>
                                 Waiter
-                            </option> -->
+                            </option>
                             <option>
                                 Customer
+                            </option>
+                            <option>
+                                Chef
                             </option>
                         </select>
                     </label>

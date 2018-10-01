@@ -151,11 +151,10 @@
 
 
             <!-- Slider Texts -->
-            <div class="lec_slide_txt lec_slide_center_middle text-center">
+            <div class="lec_slide_txt lec_slide_center_middle text-center" >
                 <img src="images/bbq/bbq_logo.png" alt="" height="180">
-                <div class="lec_gold">Mexican Restaurant</div>
+                <div class="lec_gold" id="aman"><span id="title">Mexican Restaurant</span></div>
                 <div class="lec_slide_subtitle">Tacos, Buritos, Drinks<br>Fresh Quality</div>
-     
             </div>
             <!-- Slider Texts End -->
         
@@ -201,9 +200,16 @@
                             <div class="lec_parallax_menu lec_image_bck lec_fixed">
                                 <h2 class="lec_gold lec_title_counter">Catering</h2>
                                 <h3 class="lec_gold_subtitle">Let Us Cater <br>Your Next Event</h3>
-                                <p>Let Lecker take care of your catering needs. Our party trays are the perfect solution for your next meeting, event or gathering. Just order online, pick up in store and grab your chopsticks! Let Lecker do all the wok for you – plates, utensils and fortune cookies included.</p>
-                                <a href="#" class="btn">View Our Catering Menu <i class="ti ti-truck"></i></a>
-                                
+                                <p id="desc">Let Lecker take care of your catering needs. Our party trays are the perfect solution for your next meeting, event or gathering. Just order online, pick up in store and grab your chopsticks! Let Lecker do all the wok for you – plates, utensils and fortune cookies included.</p>
+                                <div class="row lec_contacts_icons">
+                                    <!-- <i class="ti ti-location-pin"></i> Raymond Boulevard 224 <br> -->
+                                    <span id="timing"><i class="ti ti-time"></i>10:00 AM - 21:00 PM</span><br>
+                                    <span id="timing"><i class="ti ti-email"></i> info@themebusiness.com </span><br>
+                                    <span id="phone_no"><i class="ti ti-mobile"></i>1-444-123-4559</span><br>
+                                    <i class="ti ti-link"></i> www.yourwebsite.com <br>
+                                </div>
+                                <br>
+                                <a href="#" class="btn">Have A Dine With US <i class="ti ti-truck"></i></a>
                             </div>
                         </div>
 
@@ -234,7 +240,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_315655118.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Monday</span>
-                        <span class="lec_news_title lec_gold_subtitle">JALAPEÑO CHEESE FRITTERS</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="monday_item">JALAPEÑO CHEESE FRITTERS</span>
                         <p>Freshly made hand-breaded fritters, oozing with melted cheese and jalapeño. Served with ranch dressing.</p>  
                     </div>
 
@@ -242,7 +248,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_230941204.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Thuesday</span>
-                        <span class="lec_news_title lec_gold_subtitle">SPINACH STUFFED MUSHROOMS</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="tuesday_item">SPINACH STUFFED MUSHROOMS</span>
                         <p>Fresh mushroom caps filled with Lecker Espinaca.</p>  
                     </div>
 
@@ -250,7 +256,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_362034839.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Wednesday</span>
-                        <span class="lec_news_title lec_gold_subtitle">FIRECRACKER SHRIMP</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="wednesday_item">FIRECRACKER SHRIMP</span>
                         <p>Flash-fried shrimp tossed in a  chile aioli, with spicy peanut dressing, served with fresh mango relish.</p>  
                     </div>
 
@@ -258,7 +264,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_362034866.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Thursday</span>
-                        <span class="lec_news_title lec_gold_subtitle">MINI SHRIMP COCKTAIL</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="thursday_item">MINI SHRIMP COCKTAIL</span>
                         <p>Spicy Mexican shrimp cocktail, layered over refreshing avocado cream.</p>  
                     </div>
 
@@ -266,7 +272,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_400773136.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Friday</span>
-                        <span class="lec_news_title lec_gold_subtitle">BACON-WRAPPED STUFFED SHRIMP</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="friday_item">BACON-WRAPPED STUFFED SHRIMP</span>
                         <p>Fire-grilled, bacon-wrapped shrimp, stuffed with fresh jalapeño and blended cheeses.</p>  
                     </div>
 
@@ -274,7 +280,7 @@
                     <div class="lec_news_block text-center">
                         <span class="lec_news_img_parent"><span class="lec_news_img lec_image_bck" data-image="images/mexican/shutterstock_395007781.jpg"></span></span>
                         <span class="lec_gold lec_title_animation lec_wht_txt">Sat Sun</span>
-                        <span class="lec_news_title lec_gold_subtitle">GUACAMOLE</span>
+                        <span class="lec_news_title lec_gold_subtitle" id="satsun_menu">GUACAMOLE</span>
                         <p>Perfectly seasoned guacamole made with fresh avocado.</p>  
                     </div>
 
@@ -297,7 +303,7 @@
 
             <div class="container-fluid text-center">
 
-                <h2 class="lec_gold lec_title_counter">Dishes of the Day</h2>
+                <h2 class="lec_gold lec_title_counter">Today's Offer</h2>
                 <h3 class="lec_gold_subtitle">The Flavour of Mexico</h3>
 
  
@@ -411,11 +417,11 @@
                             <div class="lec_over" data-color="#000" data-opacity="0.05"></div>
                             
                             <div class="lec_parallax_menu lec_image_bck lec_fixed">
-                                <h2 class="lec_gold lec_title_counter">Salads</h2>
+                                <h2 class="lec_gold lec_title_counter" id="starter">Starters</h2>
                                 
                                 <div class="lec_parallax_menu_mini lec_parallax_menu_mini_feaut">
                                     <div class="lec_parallax_menu_mini_title clearfix">
-                                        <h3>GRILLED CHICKEN SALAD</h3>
+                                        <span id="starter_1"><h3>GRILLED CHICKEN SALAD</h3></span>
                                         <div class="lec_menu_spacer"></div>
                                         <div class="lec_parallax_menu_mini_price">$2.95</div>
                                     </div>
@@ -426,7 +432,7 @@
 
                                 <div class="lec_parallax_menu_mini">
                                     <div class="lec_parallax_menu_mini_title clearfix">
-                                        <h3>FAJITA SALAD</h3>
+                                        <span id="starter_2"><h3> SALAD</h3></span>
                                         <div class="lec_menu_spacer"></div>
                                         <div class="lec_parallax_menu_mini_price">$2.95</div>
                                     </div>
@@ -434,7 +440,7 @@
 
                                 <div class="lec_parallax_menu_mini">
                                     <div class="lec_parallax_menu_mini_title clearfix">
-                                        <h3>REYNOSA SALAD</h3>
+                                        <span id="starter_3"><h3>REYNOSA SALAD</h3></span>
                                         <div class="lec_menu_spacer"></div>
                                         <div class="lec_parallax_menu_mini_price">$2.95</div>
                                     </div>
@@ -442,7 +448,7 @@
 
                                 <div class="lec_parallax_menu_mini">
                                     <div class="lec_parallax_menu_mini_title clearfix">
-                                        <h3>SOPA DEL DÍA</h3>
+                                        <span  id="starter_4"><h3>SOPA DEL DÍA</h3></span>
                                         <div class="lec_menu_spacer"></div>
                                         <div class="lec_parallax_menu_mini_price">$2.95</div>
                                     </div>
@@ -459,6 +465,7 @@
 
                     </div>
                     <!-- row end -->
+                
 
                     <div class="row text-left">
                         <div class="col-md-5 lec_animation_block lec_animation_abs_block lec_posl lec_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)" data-image="images/main_back.jpg">
@@ -467,7 +474,7 @@
                             <div class="lec_over" data-color="#000" data-opacity="0.05"></div>
                             
                             <div class="lec_parallax_menu lec_image_bck lec_fixed">
-                                <h2 class="lec_gold lec_title_counter">Dips</h2>
+                                <h2 class="lec_gold lec_title_counter" id="maincourse">Main Course</h2>
                                 
                                 <div class="lec_parallax_menu_mini">
                                     <div class="lec_parallax_menu_mini_title clearfix">
@@ -535,6 +542,73 @@
 
                     </div>
                     <!-- row end -->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row row_mb_100">
+                            <div class="col-md-9 lec_animation_block" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)">
+                                <img src="images/mexican/shutterstock_395007781.jpg" alt="">
+                            </div>
+    
+                            <div class="col-md-5 lec_animation_block lec_animation_abs_block lec_posr lec_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 80px, 0px)" data-image="images/main_back.jpg">
+    
+                                <!-- Over -->
+                                <div class="lec_over" data-color="#000" data-opacity="0.05"></div>
+                                
+                                <div class="lec_parallax_menu lec_image_bck lec_fixed">
+                                    <h2 class="lec_gold lec_title_counter" id="deserts">Deserts</h2>
+                                    
+                                    <div class="lec_parallax_menu_mini lec_parallax_menu_mini_feaut">
+                                        <div class="lec_parallax_menu_mini_title clearfix">
+                                            <h3>GRILLED CHICKEN SALAD</h3>
+                                            <div class="lec_menu_spacer"></div>
+                                            <div class="lec_parallax_menu_mini_price">$2.95</div>
+                                        </div>
+    
+          
+                                        <p>Fire-grilled chicken, mandarin oranges, toasted almonds, grape tomatoes, raisins, jicama, radishes and avocado slices, mixed with fresh garden greens.</p>
+                                    </div>
+    
+                                    <div class="lec_parallax_menu_mini">
+                                        <div class="lec_parallax_menu_mini_title clearfix">
+                                            <h3>FAJITA SALAD</h3>
+                                            <div class="lec_menu_spacer"></div>
+                                            <div class="lec_parallax_menu_mini_price">$2.95</div>
+                                        </div>
+                                    </div> 
+    
+                                    <div class="lec_parallax_menu_mini">
+                                        <div class="lec_parallax_menu_mini_title clearfix">
+                                            <h3>REYNOSA SALAD</h3>
+                                            <div class="lec_menu_spacer"></div>
+                                            <div class="lec_parallax_menu_mini_price">$2.95</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="lec_parallax_menu_mini">
+                                        <div class="lec_parallax_menu_mini_title clearfix">
+                                            <h3>SOPA DEL DÍA</h3>
+                                            <div class="lec_menu_spacer"></div>
+                                            <div class="lec_parallax_menu_mini_price">$2.95</div>
+                                        </div>
+                                    </div>
+    
+    
+                                    
+                                </div>
+    
+    
+    
+                            </div>
+    
+    
+                        </div>
+                        <!-- row ends -->
 
 
                 </div>
@@ -543,16 +617,161 @@
         </section>
         <!-- section end -->
         
-
-        <!-- section -->
-        <section class="lec_section lec_image_bck lec_wht_txt lec_fixed" data-stellar-background-ratio="0.2" data-image="images/black-1072366_1920.jpg">
+        <section class="lec_section lec_image_bck lec_fixed lec_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg" data-bottom-top="@data-animation:noactive" data-200-bottom="@data-animation:active">
 
             <!-- Over -->
-            <div class="lec_over" data-color="#000" data-opacity="0.5"></div>
-
+            <div class="lec_over" data-color="#000" data-opacity="0.8"></div>
 
             <div class="container text-center">
-                <h2 class="lec_gold lec_title_counter">Shop</h2>
+                <h2 class="lec_gold lec_title_counter">RESERVATION</h2>
+                <h3 class="lec_gold_subtitle">For a group reservation of 6 people or more, <br>contact us through the online form </h3>
+                 <!-- lr tb section Start -->
+<!-- <div class="lr_tb_main_section_wrapper"> -->
+
+    <div class="container">
+        <!-- <div class="row"> -->
+            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="lr_reser_heading_main_wrapper lr_tb_heading_main_wrapper">
+                    <h2><span class="lr_dots_left"></span>Book Your Tables<span class="lr_dots_right"></span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                </div>
+            </div> -->
+            <div class="lr_tb_main_box_wrapper">
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper1">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb1.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw1.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper2">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb2.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw2.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper3">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb3.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw3.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper4">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb4.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw4.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper5">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb5.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw5.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper6">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb6.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw6.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper7">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb7.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw7.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper8">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tb8.png" alt="table_img">
+                    <img src="http://www.webstrot.com/html/street/html/images/content/tbw8.png" class="img-top" alt="table_img">
+                    <div class="lr_tb_img_box_overlay"></div>
+                    <div class="lr_tb_overlay_btn_wrapper">
+                        <ul>
+                            <li><a href="#">Book Table</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    <!-- </div> -->
+</div>
+<!-- lr tb section End -->
+
+                <!-- <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <p>Book a table</p>
+                        <input type="text" placeholder="Date" class="form-control" >
+                        <input type="text" placeholder="Time" class="form-control" >
+                        <input type="text" placeholder="Party" class="form-control" >
+                    </div>
+
+                    <div class="col-md-5">
+                        <p>Contact Details</p>
+                        <input type="text" placeholder="Name" class="form-control" >
+                        <input type="email" class="form-control" placeholder="Email" >
+                        <input type="text" placeholder="Phone" class="form-control">
+                    </div>
+
+                    <div class="col-md-10 col-md-offset-1">
+                        <textarea class="form-control" placeholder="Message" rows="6"></textarea>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+
+                        <input type="submit" class="btn" value="Make reservation" >
+                    </div>
+                </div> -->
+                <!-- row end -->
+            </div>
+            <!-- container end -->
+            
+    </section>
+    <!-- section end -->
+
+
+
+        <!-- section -->
+        <!-- <section class="lec_section lec_image_bck lec_wht_txt lec_fixed" data-stellar-background-ratio="0.2" data-image="images/black-1072366_1920.jpg"> -->
+
+            <!-- Over -->
+            <!-- <div class="lec_over" data-color="#000" data-opacity="0.5"></div> -->
+
+
+            <!-- <div class="container text-center">
+                <h2 class="lec_gold lec_title_counter">To Day's Offers</h2>
                 <h3 class="lec_gold_subtitle">FROM THE KITCHEN</h3>
                 
                 <div class="row">
@@ -609,13 +828,13 @@
 
              
                 
-                </div>
+                </div> --> 
                 <!-- row end -->
                 
      
-            </div>
+            <!-- </div> -->
             <!-- container end -->
-        </section>
+        <!-- </section> -->
         <!-- section end -->
 
 
@@ -837,12 +1056,12 @@
 
 
 
-            <div class="container-fluid text-center">
+            <!-- <div class="container-fluid text-center">
                 <h2 class="lec_gold lec_title_counter">Gallery</h2>
-                <h3 class="lec_gold_subtitle">Out Best Moments</h3>
+                <h3 class="lec_gold_subtitle">Out Best Moments</h3> -->
                 <!-- section -->
 
-                <div class="lec_slider_single lec_wht_txt lec_lm_type_i" data-dots="false" data-autoplay="true">
+                <!-- <div class="lec_slider_single lec_wht_txt lec_lm_type_i" data-dots="false" data-autoplay="true">
                     
                     <div class="lec_lm_type_i_item">
                         <img src="images/slider/sl1.jpg" alt="">
@@ -856,9 +1075,9 @@
                         <img src="images/slider/sl3.jpg" alt="">
                     </div>
 
-                </div>
+                </div> -->
                 <!-- slider end -->
-            </div>
+            <!-- </div> -->
             <!-- container end -->
                 
         </section>
@@ -954,17 +1173,17 @@
         
 
         <!-- section -->
-        <section class="lec_section">
+        <!-- <section class="lec_section">
 
             <div class="container text-center">
                 <h2 class="lec_gold lec_title_counter">Careers</h2>
                 <h3 class="lec_gold_subtitle">Working at Lecker</h3>
                 <p>Thank you for your interest in employment at Lecker! Lecker is committed to providing the best possible climate for maximum development and goal achievement for all employees. Our practice is to treat each employee as an individual.</p>
                 <p><a href="#" class="btn">Read More <i class="ti ti-money"></i></a></p>
-            </div>
+            </div> -->
             <!-- container end -->
                 
-        </section>
+        <!-- </section> -->
         <!-- section end -->
 
 
@@ -1005,182 +1224,38 @@
         <!-- section end -->
 
         <!-- section -->
-        <section class="lec_section lec_image_bck lec_fixed lec_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg" data-bottom-top="@data-animation:noactive" data-200-bottom="@data-animation:active">
-
-                <!-- Over -->
-                <div class="lec_over" data-color="#000" data-opacity="0.8"></div>
-
-                <div class="container text-center">
-                    
-                    <h2 class="lec_gold lec_title_counter">Reservation</h2>
-                    <h3 class="lec_gold_subtitle">For a group reservation of 6 people or more, <br>contact us through the online form </h3>
-                     <!-- lr tb section Start -->
-    <!-- <div class="lr_tb_main_section_wrapper"> -->
-        <div class="container">
-            <!-- <div class="row"> -->
-                <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="lr_reser_heading_main_wrapper lr_tb_heading_main_wrapper">
-                        <h2><span class="lr_dots_left"></span>Book Your Tables<span class="lr_dots_right"></span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                    </div>
-                </div> -->
-                <div class="lr_tb_main_box_wrapper">
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper1">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb1.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw1.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper2">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb2.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw2.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper3">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb3.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw3.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper4">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb4.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw4.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper5">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb5.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw5.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper6">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb6.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw6.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper7">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb7.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw7.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lr_tb_box1_wrapper lr_tb_box1_wrapper8">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tb8.png" alt="table_img">
-                        <img src="http://www.webstrot.com/html/street/html/images/content/tbw8.png" class="img-top" alt="table_img">
-                        <div class="lr_tb_img_box_overlay"></div>
-                        <div class="lr_tb_overlay_btn_wrapper">
-                            <ul>
-                                <li><a href="#">Book Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            <!-- </div> -->
-        <!-- </div> -->
-    </div>
-    <!-- lr tb section End -->
-
-                    <!-- <div class="row">
-                        <div class="col-md-5 col-md-offset-1">
-                            <p>Book a table</p>
-                            <input type="text" placeholder="Date" class="form-control" >
-                            <input type="text" placeholder="Time" class="form-control" >
-                            <input type="text" placeholder="Party" class="form-control" >
-                        </div>
-
-                        <div class="col-md-5">
-                            <p>Contact Details</p>
-                            <input type="text" placeholder="Name" class="form-control" >
-                            <input type="email" class="form-control" placeholder="Email" >
-                            <input type="text" placeholder="Phone" class="form-control">
-                        </div>
-
-                        <div class="col-md-10 col-md-offset-1">
-                            <textarea class="form-control" placeholder="Message" rows="6"></textarea>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-
-                            <input type="submit" class="btn" value="Make reservation" >
-                        </div>
-                    </div> -->
-                    <!-- row end -->
-
-                </div>
-                <!-- container end -->
-                
-        </section>
-        <!-- section end -->
-
+        
 
         <!-- section -->
-        <section class="lec_section lec_section_no_overlay">
+        <!-- <section class="lec_section lec_section_no_overlay"> -->
         
                 <!-- Over -->
-                <div class="lec_over" data-color="#333" data-opacity="0.05"></div>
+                <!-- <div class="lec_over" data-color="#333" data-opacity="0.05"></div>
 
-                <div class="container text-center">
+                <div class="container text-center"> -->
 
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-10 lec_animation_block lec_wht_txt" data-bottom-top="transform:translate3d(0px, 80px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)">
                             <div class="lec_virtual_close"><i class="ti ti-close"></i></div>
-                            <div class="lec_virtual_play lec_virtual_play_black lec_image_bck">
+                            <div class="lec_virtual_play lec_virtual_play_black lec_image_bck"> -->
 
                                 <!-- Slider Texts -->
-                                <div class="lec_slide_txt lec_slide_left_middle">
+                                <!-- <div class="lec_slide_txt lec_slide_left_middle">
                                     <img src="images/bbq/bbq_logo.png" alt="" height="160"><br>
                                     <div class="lec_gold">Discover Us</div>
                                     <div class="lec_slide_subtitle">Play The Video</div>
-                                </div>
+                                </div> -->
                                 <!-- Slider Texts End -->
-                            </div>
+                            <!-- </div>
 
                             <iframe height="615" src="https://www.youtube.com/embed/vBO2q23-6iU?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-                        </div>
+                        </div> -->
 
-                        <div class="col-md-5 lec_animation_block lec_animation_abs_block lec_posr lec_image_bck" data-bottom-top="transform:translate3d(0px, -80px, 0px)" data-top-bottom="transform:translate3d(0px, 0px, 0px)" data-image="images/main_back.jpg">
+                        <!-- <div class="col-md-5 lec_animation_block lec_animation_abs_block lec_posr lec_image_bck" data-bottom-top="transform:translate3d(0px, -80px, 0px)" data-top-bottom="transform:translate3d(0px, 0px, 0px)" data-image="images/main_back.jpg"> -->
 
                             <!-- Over -->
-                            <div class="lec_over" data-color="#000" data-opacity="0.05"></div>
+                            <!-- <div class="lec_over" data-color="#000" data-opacity="0.05"></div>
                             
                             <div class="lec_parallax_menu lec_image_bck lec_fixed">
                                 <h2 class="lec_gold lec_title_counter">Virtual</h2>
@@ -1197,24 +1272,24 @@
                                 </div>
                                 
                                 
-                            </div>
+                            </div> 
 
 
 
-                        </div>
+                        </div> 
 
 
-                    </div>
+                    </div>-->
                     <!-- row end -->
-                </div>
+                <!-- </div> -->
                 <!-- container end -->
                 
-        </section>
+        <!-- </section> -->
         <!-- section end -->
 
         
     
-    </section>
+    <!-- </section> -->
     <!-- Content End -->
         
     
@@ -1247,7 +1322,7 @@
                         </div>
                     </div>
 
-                    <p>© Lecker 2016</p>
+                    <!-- <p>© Lecker 2016</p> -->
 
                 </div>
             </div>
@@ -1267,9 +1342,18 @@
 
 <!-- Theme JS -->
 <script src="js/lecker_script.js"></script>
-
+<script>
+    var o;
+       function reqListener () {
+           o=JSON.parse(this.responseText);
+               console.log(o);
+            //    document.getElementById("edit").innerHTML=a;
+}
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "");
+oReq.send();
+</script>
 
 </body>
-
-<!-- Mirrored from lecker.maskandesign.com/html/01_07_mexican.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Sep 2018 08:31:08 GMT -->
 </html>
