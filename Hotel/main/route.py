@@ -43,7 +43,7 @@ def add_hotels():
 
     db.session.add(new_hotel)
     db.session.commit()
-    return jsonify(new_hotel)
+    return jsonify(a=new_hotel)
 
 # endpoint to show all hotelss
 @app.route("/hotels", methods=["GET"])
@@ -54,10 +54,10 @@ def get_hotels():
 
 
 # endpoint to get hotels detail by id
-@app.route("/hotels/<id>", methods=["GET"])
-def hotels_detail(id):
-    hotels = Hotel.query.get(id)
-    return hotels_schema.jsonify(hotels)
+@app.route("/hotels/<hotel_id>", methods=["GET"])
+def hotels_detail(hotel_id):
+    hotels = Hotel.query.get(hotel_id)
+    return jsonify(bestsellers=hotels.bestsellers,closing_time=hotels.closing_time,contact=hotels.contact,hotel_address=hotels.hotel_address,hotel_desc=hotels.hotel_desc, hotel_email=hotels.hotel_email,hotel_name=hotels.hotel_name,hotel_pic=hotels.hotel_pic,no_eightseater=hotels.no_eightseater, no_fourseater=hotels.no_fourseater, no_sixseater=hotels.no_sixseater, no_twoseater=hotels.no_twoseater,no_waiter=hotels.no_waiter, opening_time=hotels.opening_time, special_friday=hotels.special_friday, special_monday=hotels.special_monday, special_saturday=hotels.special_saturday, special_sunday=hotels.special_sunday, special_thursday=hotels.special_thursday, special_tuesday=hotels.special_tuesday, special_wednesday=hotels.special_wednesday,user_id= hotels.user_id)
 
 
 # endpoint to create new user
@@ -81,10 +81,14 @@ def add_user():
 @app.route("/isRegisteredUser/<phone>", methods=["GET"])
 def isRegisteredUser(phone):
     data = User.query.filter_by(phone= phone).first()
-    if (data.phone != phone) :
-        return jsonify(a="False")
-    else :
-        return jsonify(a="True")
+    if data is not None:
+        if (data.phone == phone) :
+          
+            return jsonify(a="True")
+        else :
+            return jsonify(a="False")
+    else:
+        return jsonify(a="not_registered")
 
 # endpoint to check whether user is already is valid
 @app.route("/isValidUser", methods=["GET"])
@@ -97,7 +101,7 @@ def isValidUser():
     # return user_schema.jsonify(data)
 
     if(data.password == password and data.user_type == user_type) :
-        return jsonify(a="True")
+        return jsonify(a="True",b=data.user_id)
     else :
         return jsonify(a="False")
 
@@ -108,6 +112,13 @@ def get_user():
     all_users = User.query.all()
     result = users_schema.dump(all_users)
     return jsonify(a=result.data)
+
+# endpoint to give user id 
+@app.route("/giveUserId/<phone>", methods=["GET"])
+def giveUserId(phone):
+    data = User.query.filter_by(phone= phone).first()
+    return jsonify(a=data.user_id)
+    
 
 # endpoint to add a new waiter
 @app.route("/waiter", methods=["POST"])
