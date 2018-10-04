@@ -755,7 +755,8 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="1" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <!-- <a id="1" href="#" onclick="return changeFreq(this)">Book Table</a> -->
+                                            <a id="1" href="#" data-toggle="modal" data-target="#exampleModalCenter" onclick="return changeFreq(this)">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -767,7 +768,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="2" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="2" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -779,7 +780,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="3" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="3" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -791,7 +792,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="4" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="4" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -803,7 +804,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="5" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="5" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -815,7 +816,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="6" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="6" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -827,7 +828,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="7" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="7" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -839,7 +840,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="8" href="#" onclick="return changeFreq(this)">Book Table</a>
+                                            <a id="8" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -879,6 +880,32 @@
 
             </section>
             <!-- section end -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="http://127.0.0.1:8080/booking">
+                                <input hidden type="text" name "user_id" id="user_id">
+                                <input hidden type="text" name="hotel_id" id="hotel_id">
+                                <input hidden type="text" name="table_id" id="table_id">
+                                <input hidden type="text" name="waiter_id" id="waiter_id">
+                                <input hidden type="boolean" name="checkin" id="checkin" value="FALSE">
+                                <input type="datetime-local" id="date_time" name="date_time">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="return xhr();">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -1543,10 +1570,56 @@
         oReq.send();
 
         function changeFreq(element) {
-            window.localStorage.setItem("table_id", element.id);
+            // window.localStorage.setItem("table_id", element.id);
+            // document.getElementById("exampleModalLongTitle").innerText = element.id;
+
             console.log(element.id);
+            var o;
+            var user = parseInt(window.localStorage.getItem("user_id"));
+            var hotel = parseInt(window.localStorage.getItem("hotel_id"));
+            function reqListener() {
+                o = JSON.parse(this.responseText);
+                console.log(o);
+                documecnt.getElementById("user_id").innerText = user;
+                documecnt.getElementById("hotel_id").innerText = hotel;
+                documecnt.getElementById("table_id").innerText = element.id;
+                documecnt.getElementById("waiter_id").innerText = o.waiter_id;
+            }
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", reqListener);
+            oReq.open("GET", `http://127.0.0.1:8080/waiter/${hotel}`);
+            oReq.send();
+
+            // var o;
+            // var user = parseInt(window.localStorage.getItem("user_id"));
+            // var hotel = parseInt(window.localStorage.getItem("hotel_id"));
+            // function reqListener() {
+            //     o = JSON.parse(this.responseText);
+            //     console.log(o);
+            //     documecnt.getElementById("user_id").innerText = user;
+            //     documecnt.getElementById("hotel_id").innerText = hotel;
+            //     documecnt.getElementById("table_id").innerText = element.id;
+            //     documecnt.getElementById("waiter_id").innerText = o.waiter_id;
+            // }
+            // var oReq = new XMLHttpRequest();
+            // oReq.addEventListener("load", reqListener);
+            // oReq.open("GET", `http://127.0.0.1:8080/waiter/${hotel}`);
+            // oReq.send();
+
             return false;
         }
+        // function xhr() {
+        //     var o;
+        //     function reqListener() {
+        //         o = JSON.parse(this.responseText);
+        //         console.log(o);
+        //     }
+        //     var oReq = new XMLHttpRequest();
+        //     oReq.addEventListener("load", reqListener);
+        //     oReq.open("GET", "http://127.0.0.1:8080/booking");
+        //     oReq.send();
+        // }
+
     </script>
     </script>
 
