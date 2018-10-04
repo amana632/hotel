@@ -205,7 +205,7 @@
 							<form action="http://127.0.0.1:8080/hotels" class="form-horizontal parsley-validate" method="POST">
 								<div class="form-body">
 									<div class="form-group">
-										<label class="control-label col-md-3">Hotel Name</label>
+										<label class="control-label col-md-3">Customer Name</label>
 										<div class="col-md-5">
 											<div class="inputer">
 												<div class="input-wrapper">
@@ -216,7 +216,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Hotel Address</label>
+										<label class="control-label col-md-3">Customer Address</label>
 										<div class="col-md-5">
 											<div class="inputer">
 												<div class="input-wrapper">
@@ -226,7 +226,7 @@
 										</div>
 									</div>
 
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Email Id</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -235,7 +235,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Password: </label>
 										<div class="col-md-5">
@@ -262,7 +262,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3">No Of Waiters :</label>
+										<label class="control-label col-md-3">No. Of people</label>
 										<div class="col-md-5">
 											<div class="inputer">
 												<div class="input-wrapper">
@@ -272,7 +272,7 @@
 										</div>
 									</div>
 
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Monday Special</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -281,8 +281,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Tuesday Special</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -291,8 +291,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Wednesday Special</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -301,8 +301,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Thursday Special</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -311,8 +311,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Friday Special</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -341,8 +341,8 @@
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
+									</div> -->
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Bestsellers </label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -351,7 +351,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 
 
 									<!-- <div class="form-group">
@@ -387,7 +387,7 @@
 										</div>
 									</div> -->
 									<div class="form-group">
-										<label class="control-label col-md-3">Types Of Seating</label>
+										<label class="control-label col-md-3">Seating</label>
 										<div class="col-md-5">
 											<div class="checkboxer">
 												<input type="checkbox" id="check1" value="" data-parsley-mincheck="2">
@@ -439,7 +439,7 @@
 											</select>
 										</div>
 									</div> -->
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label class="control-label col-md-3">Description Of Hotel</label>
 										<div class="col-md-5">
 											<div class="inputer">
@@ -448,7 +448,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="form-group">
 										<!-- <div class="col-md-12">
 											<div class="panel">
@@ -610,7 +610,7 @@
 		</div> -->
 
 
-	<!-- <div class="footer-links margin-top-40">
+	<div class="footer-links margin-top-40">
 		<div class="row no-gutters">
 			<div class="col-xs-6 bg-brown">
 				<a href="forms-switchers.html">
@@ -631,7 +631,7 @@
 				</a>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	</div>
 	<div class="layer-container">
 
@@ -1612,6 +1612,7 @@
 			Pleasure.init();
 			Layout.init();
 			FormsPickers.init();
+
 		});
 	</script>
 	<!-- End of time app-->
@@ -1628,6 +1629,62 @@
 
 
 	<script>
+		var value = window.localStorage.getItem("table_id");
+		if (value == "1") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+		}
+		else if (value == "2") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else if (value == "3") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else if (value == "4") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else if (value == "5") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else if (value == "6") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else if (value == "7") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+
+		}
+		else (value == "8") {
+			document.getElementById("check1").disabled = true;
+			document.getElementById("check2").disabled = true;
+			document.getElementById("check3").disabled = true;
+			document.getElementById("check4").disabled = true;
+		}
+		console.log(value);
 		(function (i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
 				(i[r].q = i[r].q || []).push(arguments)
