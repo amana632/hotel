@@ -891,11 +891,11 @@
                         </div>
                         <div class="modal-body">
                             <form action="http://127.0.0.1:8080/booking">
-                                <input hidden type="text" name "user_id" id="user_id">
-                                <input hidden type="text" name="hotel_id" id="hotel_id">
-                                <input hidden type="text" name="table_id" id="table_id">
-                                <input hidden type="text" name="waiter_id" id="waiter_id">
-                                <input hidden type="boolean" name="checkin" id="checkin" value="FALSE">
+                                <input hidden type= "text" name= "user_id"  id="user_id"> 
+                                <input hidden type= "text" name="hotel_id" id="hotel_id">
+                                <input hidden type= "text" name="table_id" id="table_id">
+                                <input hidden type= "text" name="waiter_id" id="waiter_id">
+                                <input hidden type= "boolean" name="checkin" id="checkin" value="FALSE">
                                 <input type="datetime-local" id="date_time" name="date_time">
                             </form>
                         </div>
@@ -1608,19 +1608,28 @@
 
             return false;
         }
-        // function xhr() {
-        //     var o;
-        //     function reqListener() {
-        //         o = JSON.parse(this.responseText);
-        //         console.log(o);
-        //     }
-        //     var oReq = new XMLHttpRequest();
-        //     oReq.addEventListener("load", reqListener);
-        //     oReq.open("GET", "http://127.0.0.1:8080/booking");
-        //     oReq.send();
-        // }
+        function xhr() {
+            var url = "http://localhost:8080/";
 
-    </script>
+            var data = {};
+            // data.firstname = "John2";
+            // data.lastname  = "Snow2";
+            var json = JSON.stringify(data);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("PUT", url+'/12', true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr.onload = function () {
+                var users = JSON.parse(xhr.responseText);
+                    if (xhr.readyState == 4 && xhr.status == "200") {
+                        console.table(users);
+                    } else {
+                        console.error(users);
+                    }
+                }
+            xhr.send(json);
+            }
+
     </script>
 
 </body>
