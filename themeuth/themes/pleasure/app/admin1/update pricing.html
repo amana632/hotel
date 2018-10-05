@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>update Details</title>
+	<title>Update Pricing</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,7 +107,7 @@
 		<div class="page-header full-content bg-brown">
 			<div class="row">
 				<div class="col-sm-6">
-					<h1>Update details
+					<h1>Update Pricing
 						
 					</h1>
 				</div>
@@ -128,142 +128,77 @@
 				</div> -->
 			</div>
 		</div>
-		<!-- <div class="row">
-			<div class="col-md-12">
-				<div class="panel">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<h4>FORM STATES</h4>
-						</div>
-					</div>
-					<div class="panel-body">
-						<form action="#" class="form-horizontal">
-							<div class="row">
-								<div class="form-group has-success">
-									<label class="control-label col-md-3" for="inputSuccess1">Input with success</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputSuccess1" placeholder="Input with success">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group has-warning">
-									<label class="control-label col-md-3" for="inputWarning1">Input with warning</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputWarning1" placeholder="Input with warning">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group has-error">
-									<label class="control-label col-md-3" for="inputError1">Input with error</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputError1" placeholder="Input with error">
-											</div>
-											<span class="help-block">
-												<small>Please correct the error</small>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group has-success has-feedback">
-									<label class="control-label col-md-3" for="inputSuccess2">Input with success</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputSuccess2">
-												<span class="ion-android-done tooltips form-control-feedback" data-toggle="tooltip" data-placement="top" title="Success tooltip"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group has-warning has-feedback">
-									<label class="control-label col-md-3" for="inputWarning2">Input with warning</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputWarning2">
-												<span class="ion-android-warning tooltips form-control-feedback" data-toggle="tooltip" data-placement="top" title="Warning tooltip"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group has-error has-feedback">
-									<label class="control-label col-md-3" for="inputError2">Input with error</label>
-									<div class="col-md-5">
-										<div class="inputer">
-											<div class="input-wrapper">
-												<input type="text" class="form-control" id="inputError2">
-												<span class="ion-android-alert tooltips form-control-feedback" data-toggle="tooltip" data-placement="top" title="Error tooltip"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		</div>
+		</div> 
 
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel">
 					<div class="panel-heading">
-						<div class="panel-title">
+						<!-- <div class="panel-title">
 							<h4>BASIC VALIDATION</h4>
-						</div>
+						</div> -->
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<form action="http://127.0.0.1/hotels" class="form-horizontal parsley-validate">
+	<form action="http://127.0.0.1/menu" class="form-horizontal parsley-validate">
 								<div class="form-body">
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3" id="user_id">User Id</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="hotel_name" class="form-control" placeholder="type something" required>
-												</div>
-											</div>
-										</div>
-									</div> -->
 
-									<div class="form-group">
-										<label class="control-label col-md-3">User Id</label>
+ 									<div class="form-group"  hidden>
+										<label  class="control-label col-md-3">Hotel Id</label>
 										<div class="col-md-5">
 											<div class="inputer">
 												<div class="input-wrapper">
-													<input type="number" name="hotel_address" class="form-control" id="user_id" required>
+													<input type="number"  class="form-control" id="hotel_id" required>
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Hotel Id</label>
+									<script>
+									function val()
+									{
+										document.getElementById("hotel_id").value=localStorage.getItem("hotel_id");
+									}
+									</script>
+
+									<div class="form-group">
+										<label  class="control-label col-md-3">Item Name</label>
 										<div class="col-md-5">
 											<div class="inputer">
 												<div class="input-wrapper">
-													<input type="text" name="Hotel Id" class="form-control" id="hotel_id" required>
+													<input type="text" id="item_name" class="form-control"  required>
 												</div>
 											</div>
 										</div>
-									</div> -->
+									</div>
+									<div class="form-group">
+										<label  class="control-label col-md-3">Item Price</label>
+										<div class="col-md-5">
+											<div class="inputer">
+												<div class="input-wrapper">
+													<input type="text" id="item_price" class="form-control"  required>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group" hidden>
+										<label  class="control-label col-md-3">Item status</label>
+										<div class="col-md-5">
+											<div class="inputer">
+												<div class="input-wrapper">
+													<input type="text" id="item_statusi" class="form-control"  >
+												</div>
+											</div>
+										</div>
+									</div>
 
 									<div class="panel-body">
 								    <div class="row example-row">
 									<div class="panel-body">
 										<div class="row example-row">
-										<div class="control-label col-md-3">Hotel Id</div>
+										<div class="control-label col-md-3">Item type</div>
 										<div class="col-md-9">
 										<select data-placeholder="Choose a Country" class="chosen-select">
 										<option value="">Select</option>
@@ -522,193 +457,14 @@
 										</div>
 										</div>
 
-									
-
-					
-									<div class="form-group" hidden>
-										<label class="control-label col-md-3" >Order Id</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="Hotel Id" class="form-control" id="order_id" required>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-group" hidden>
-										<label class="control-label col-md-3">Waiter Status</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="Waiter Status" id="waiter_status" class="form-control">
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									<div class="form-group" hidden>
-										<label class="control-label col-md-3">Transaction Id</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="Transaction Id" class="form-control" required>
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Hotel</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="url" name="basic-url" class="form-control" placeholder="http://www.themeforest.com" required>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-3">Hotel</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="url" name="basic-url" class="form-control" placeholder="http://www.themeforest.com" required>
-												</div>
-											</div>
-										</div>
-									</div> -->
-
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Age limit</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="minmax-limit" class="form-control" placeholder="age should be between 10 and 100" required>
-												</div>
-											</div>
-										</div>
-									</div> -->
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Types Of Seating</label>
-										<div class="col-md-5">
-											<div class="checkboxer">
-												<input type="checkbox" id="check1" value="" data-parsley-mincheck="2">
-												<label for="check1">2 Seater</label>
-												<input type="number" name="no_twoseater" class="form-control" placeholder="ex: 1,2,3" required>
-											</div>
-											<div class="checkboxer">
-												<input type="checkbox" id="check2" value="">
-												<label for="check2">4 Seater</label>
-												<input type="number" name="no_fourseater" class="form-control" placeholder="ex: 1,2,3" required>
-											</div>
-											<div class="checkboxer">
-												<input type="checkbox" id="check3" value="">
-												<label for="check3">6 Seater</label>
-												<input type="number" name="no_sixseater" class="form-control" placeholder="ex: 1,2,3" required>
-											</div>
-											<div class="checkboxer">
-												<input type="checkbox" id="check4" value="">
-												<label for="check4">8 Seater</label>
-												<input type="number" name="no_eightseater" class="form-control" placeholder="ex: 1,2,3" required>
-											</div>
-										</div>
-									</div> -->
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Radios</label>
-										<div class="col-md-5">
-											<div class="radioer">
-												<input type="radio" name="radio1" id="radio1" value="option1">
-												<label for="radio1">Option one</label>
-											</div>
-											<div class="radioer">
-												<input type="radio" name="radio1" id="radio2" value="option2">
-												<label for="radio2">Option two</label>
-											</div>
-											<div class="radioer">
-												<input type="radio" name="radio1" id="radio3" value="option3" required>
-												<label for="radio3">Option three</label>
-											</div>
-										</div>
-									</div> -->
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Selectbox</label>
-										<div class="col-md-5">
-											<select name="basic-selectbox" class="selecter" required="required">
-												<option value="">Text</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
-										</div>
-									</div> -->
-									<!-- <div class="form-group">
-										<label class="control-label col-md-3">Description Of Hotel</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<textarea name="hotel_desc" class="form-control" rows="3" placeholder="type minimum 5 characters" required></textarea>
-												</div>
-											</div>
-										</div>
-									</div> -->
-									<!-- <div class="form-group"> -->
-										<!-- <div class="col-md-12">
-											<div class="panel">
-											<div class="panel-heading">
-											<div class="panel-title"><h4>TIME PICKERS</h4></div>
-											</div> -->
-										<!-- </div>  -->
-
-										<!-- <div class="panel-body"> -->
-											<!-- <div class="row example-row"> -->
-												<!-- <div class="col-md-3">In Input</div> -->
-												<!-- <label class="control-label col-md-3">In Time</label> -->
-												<!-- <div class="col-md-5">
-													<div class="inputer">
-														<div class="input-wrapper">
-															<input type="text" name="opening_time" id="clockface1" value="2:30 PM" data-format="hh:mm A" class="form-control">
-														</div>
-													</div>
-												</div> -->
-											<!-- </div> -->
-
-											<!-- <div class="row example-row">
-												<div class="control-label col-md-3">Out Time (click the Button)</div>
-												<div class="col-md-5">
-													<div class="input-group">
-														<div class="inputer">
-															<div class="input-wrapper">
-																<span id="clockface-toggle" class="input-group-addon">
-
-																	<input type="text" name="closing_time" id="clockface2" value="14:30" class="form-control" readonly="">
-																</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> -->
-											<!-- <div class="row example-row"> -->
-											<!-- <div class="col-md-3">Inline</div> -->
-											<!-- <label class="control-label col-md-3">In Time</label> -->
-
-											<!-- <div class="col-md-9"> -->
-											<!-- <div id="clockface3" class="well" style="width: 210px;"></div> -->
-											<!-- </div>
-											</div> -->
-										<!-- </div> -->
-									<!-- </div> -->
 								</div>
 						</div>
 
 
-
-
-						<div class="form-actions">
+			<div class="form-actions">
 							<div class="row">
 								<div class="col-md-offset-3 col-md-9">
-									<input type="submit" value="submit" class="btn btn-primary">
+									<button type="submit"class="btn btn-primary" onclick="val()">Update</button>
 									<button type="button" class="btn btn-default bv-reset">Cancel</button>
 								</div>
 							</div>
@@ -718,111 +474,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div class="row">
-			<div class="col-md-12">
-				<div class="panel">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<h4>VALIDATION WITH ONLY ICONS</h4>
-						</div>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<form action="#" class="form-horizontal parsley-validate-icon">
-								<div class="form-body">
-									<div class="form-group">
-										<label class="control-label col-md-3">Name</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="text" name="form2-name" class="form-control" placeholder="write your name" required>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3">Email</label>
-										<div class="col-md-5">
-											<div class="inputer">
-												<div class="input-wrapper">
-													<input type="email" name="form2-email" class="form-control" placeholder="someone@exmail.org" required>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-actions">
-									<div class="row">
-										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn btn-primary">Submit</button>
-											<button type="button" class="btn btn-default bv-reset">Cancel</button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	<!-- <div class="row">
-			<div class="col-md-12">
-				<div class="panel">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<h4>PLUGIN INTEGRATION</h4>
-						</div>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<form action="#" class="form-horizontal parsley-validate">
-								<div class="form-body">
-									<div class="form-group">
-										<label class="control-label col-md-3">Summernote WYSIWYG</label>
-										<div class="col-md-9">
-											<textarea class="form-control summernote-default" name="" required></textarea>
-										</div>
-									</div>
-								</div>
-								<div class="form-actions">
-									<div class="row">
-										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn btn-primary">Submit</button>
-											<button type="button" class="btn btn-default">Cancel</button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-
-	<!-- <div class="footer-links margin-top-40">
-		<div class="row no-gutters">
-			<div class="col-xs-6 bg-brown">
-				<a href="forms-switchers.html">
-					<span class="state">Forms</span>
-					<span>Switchers</span>
-					<span class="icon">
-						<i class="ion-android-arrow-back"></i>
-					</span>
-				</a>
-			</div>
-			<div class="col-xs-6 bg-brown">
-				<a href="forms-wizard.html">
-					<span class="state">Forms</span>
-					<span>Wizard</span>
-					<span class="icon">
-						<i class="ion-android-arrow-forward"></i>
-					</span>
-				</a>
-			</div>
-		</div>
-	</div> -->
 	</div>
 	<div class="layer-container">
 
@@ -1771,12 +1422,11 @@
 
 <script>
 	$(document).ready(function () {
-		Pleasure.init();
+		Pleasure.init();tem
 		Layout.init();
 		FormsSelect.init();
 	});
 	</script>
-
 
 <script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
