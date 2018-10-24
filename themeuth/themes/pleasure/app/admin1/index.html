@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 
+	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
 
 
 	<link rel="stylesheet" href="../../assets/admin1/css/admin1.css">
@@ -78,7 +80,7 @@
 		<div class="page-header full-content">
 			<div class="row">
 				<div class="col-sm-6">
-					<h1>Dashboard
+					<h1>Hotel Dashboard
 						<small>Activity Summary</small>
 					</h1>
 				</div>
@@ -298,38 +300,51 @@
 									<ul>
 										<li class="animate-item btn-ripple">
 											<span class="name">Monday</span>
+											<span class="price text-green" id="special_monday"> &nbsp;Content </span>
 											<span class="price text-green">
-												<i class="ion-arrow-up-b"></i> $119.56</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Tuesday</span>
+											<span class="price text-red" id="special_tuesday"> &nbsp;Content </span>
 											<span class="price text-red">
-												<i class="ion-arrow-down-b"></i> $10.69</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
+										</li>
+										<li class="animate-item btn-ripple">
+											<span class="name">Monday</span>
+											<span class="price text-green" id="special_tuesday"> &nbsp;Content </span>
+											<span class="price text-green">
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Wednesday</span>
+											<span class="price text-green" id="special_wednesday"> &nbsp;Content </span>
 											<span class="price text-green">
-												<i class="ion-arrow-up-b"></i> $31.48</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Thursday</span>
-											<span class="price text-red">
-												<i class="ion-arrow-down-b"></i> $63.94</span>
+											<span class="price text-green" id="special_thursday"> &nbsp;Content </span>
+											<span class="price text-green">
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Friday</span>
+											<span class="price text-green" id="special_friday"> &nbsp;Content </span>
 											<span class="price text-green">
-												<i class="ion-arrow-up-b"></i> $25.94</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Saturday</span>
+											<span class="price text-green" id="special_saturday"> &nbsp;Content </span>
 											<span class="price text-green">
-												<i class="ion-arrow-up-b"></i> $25.94</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
 											<span class="name">Sunday</span>
+											<span class="price text-green" id="special_sunday"> &nbsp;Content </span>
 											<span class="price text-green">
-												<i class="ion-arrow-up-b"></i> $25.94</span>
+												<i class="ion-arrow-up-b"></i> $10.69</span>
 										</li>
 									</ul>
 								</div>
@@ -428,25 +443,21 @@
 					<div class="card tile card-news-more material-animate">
 						<div class="card-heading bg-image bg-opaque5 sample-bg-image29">
 							<div class="heading-content">
-								<span class="badge">NEWS</span>
-								<span class="headline">Quickly maximize timely deliverables</span>
+								<span class="headline">More Additional Information </span>
+								<span class="badge"> Update in menu </span>
+
 								<button class="btn btn-floating btn-pink toggle-card-news-more">
 									<i class="ion-android-create"></i>
 								</button>
 							</div>
 						</div>
 						<div class="card-body">
-							<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
-								users after
-								installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-							<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
-								for real-time
-								schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
-							<p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate
-								one-to-one
-								customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the
-								art
-								customer service.</p>
+							<p>No. Of Waiters : <span id="no_waiter">20</span></p>
+							<p>Best Sellers : <span id="bestsellers">20</span></p>
+							<p>No. Of Two Seater : <span id="no_twoseater">20</span></p>
+							<p>No. Of Four Seater : <span id="no_fourseater">20</span></p>
+							<p>No. Of Six Seater : <span id="no_sixseater">20</span></p>
+							<p>No. Of Eight Seater : <span id="no_eightseater">20</span></p>
 						</div>
 					</div>
 				</div>
@@ -669,12 +680,24 @@
 	</div>
 	<div class="layer-container">
 
-		<!--<div class="menu-layer">
+		<div class="menu-layer">
 			<ul>
 				<li data-open-after="true">
 					<a href="index.html">Dashboard</a>
 				</li>
 				<li>
+					<a href="./hotel_details.html">Update Details</a>
+				</li>
+				<li>
+					<a href="./waiter_add.html">Waiter Update List</a>
+				</li>
+				<li>
+					<a href="./update pricing.html">Pricing Update</a>
+				</li>
+				<li>
+					<a href="#">Payment History</a>
+				</li>
+				<!--	<li>
 					<a href="javascript:;">Cards</a>
 					<ul class="child-menu">
 						<li>
@@ -985,8 +1008,8 @@
 				<li>
 					<a href="http://themeforest.net/item/pleasure-material-design-responsive-admin-panel/10579013">Buy Pleasure</a>
 				</li>
-			</ul>
-		</div> -->
+			</ul>-->
+		</div>
 
 
 		<div class="search-layer">
@@ -1637,6 +1660,9 @@
 	<script src="../../assets/globals/scripts/widget-audio.js"></script>
 	<script src="../../assets/globals/scripts/charts-knob.js"></script>
 	<script src="../../assets/globals/scripts/index.js"></script>
+
+
+	<script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
 
 	<script>
 		$(document).ready(function () {
