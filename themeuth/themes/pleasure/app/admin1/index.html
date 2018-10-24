@@ -16,8 +16,10 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-touch-fullscreen" content="yes">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+
 
 	<link rel="stylesheet" href="../../assets/admin1/css/admin1.css">
 	<link rel="stylesheet" href="../../assets/globals/css/elements.css">
@@ -98,21 +100,27 @@
 							<div class="card tile card-green card-weather bg-image sample-bg-image15 material-animate">
 								<div class="card-heading">
 									<div class="card-action">
-										<a href="javascript:;" data-toggle="fake-reload"></a>
+										<a href="https://www.google.com" data-toggle="fake-reload"></a>
 									</div>
 								</div>
 								<div class="card-body">
 									<div class="forecast-container">
-										<span class="temparature">19
+										<!-- <span class="temparature">19
 											<i class="wi wi-celsius"></i>
-										</span>
-										<span class="place">Barcelona, Spain</span>
-										<span class="forecast">Clear until tomorrow morning.</span>
+										</span> -->
+										<!-- <span class="place" id="hotel_name">Hotel Name</span>
+										<span class="forecast" id="hotel_desc">Hotel description</span> -->
 									</div>
 								</div>
-								<div class="card-footer">
+								<div class="card-footer" style="margin-top:-50px;height:300px;">
 									<div class="row">
-										<div class="col-xs-3 col-sm-2 animate-item">
+										<span class="place" id="hotel_name">Hotel Name : </span>
+										<span class="forecast float-left" id="hotel_desc">Hotel description : </span>
+										<span class="forecast" id="contact">Phone No : </span>
+										<span class="place" id="hotel_email">E-mail : </span>
+										<span class="place" id="closing_time">Closing time : </span>
+										<span class="place" id="opening_time">Opening time : </span>
+										<!-- <div class="col-xs-3 col-sm-2 animate-item">
 											<ul>
 												<li>MON</li>
 												<li>
@@ -122,8 +130,8 @@
 													<i class="wi wi-celsius"></i>
 												</li>
 											</ul>
-										</div>
-										<div class="col-xs-3 col-sm-2 animate-item">
+										</div> -->
+										<!-- <div class="col-xs-3 col-sm-2 animate-item">
 											<ul>
 												<li>TUE</li>
 												<li>
@@ -177,7 +185,8 @@
 													<i class="wi wi-celsius"></i>
 												</li>
 											</ul>
-										</div>
+										</div> -->
+
 									</div>
 								</div>
 							</div>
@@ -202,8 +211,8 @@
 					</div>
 					<div class="row image-row">
 						<div class="col-sm-4">
-							<ul class="bxslider width-percent-100" data-bx-slider-pager="false" data-bx-slider-controls="false" data-bx-slider-auto="true"
-							 data-bx-slider-mode="vertical">
+							<ul class="bxslider width-percent-100" data-bx-slider-pager="false" data-bx-slider-controls="false"
+							 data-bx-slider-auto="true" data-bx-slider-mode="vertical">
 								<li>
 									<div class="card tile card-indigo card-social material-animate">
 										<div class="card-body">
@@ -281,35 +290,44 @@
 									<div class="card-action">
 										<a href="javascript:;" data-toggle="fake-reload"></a>
 									</div>
-									<span class="name">Apple Inc</span>
-									<span class="price">
-										<i class="ion-arrow-up-b"></i> 0.30%</span>
+									<span class="name">Specials</span>
+									<span class="price">Day Wise</span>
 									<div class="chart chart-stocks"></div>
 								</div>
 								<div class="card-body">
 									<ul>
 										<li class="animate-item btn-ripple">
-											<span class="name">Apple Inc</span>
+											<span class="name">Monday</span>
 											<span class="price text-green">
 												<i class="ion-arrow-up-b"></i> $119.56</span>
 										</li>
 										<li class="animate-item btn-ripple">
-											<span class="name">Nokia Corporation</span>
+											<span class="name">Tuesday</span>
 											<span class="price text-red">
 												<i class="ion-arrow-down-b"></i> $10.69</span>
 										</li>
 										<li class="animate-item btn-ripple">
-											<span class="name">Canon Inc</span>
+											<span class="name">Wednesday</span>
 											<span class="price text-green">
 												<i class="ion-arrow-up-b"></i> $31.48</span>
 										</li>
 										<li class="animate-item btn-ripple">
-											<span class="name">Motorola Solutions</span>
+											<span class="name">Thursday</span>
 											<span class="price text-red">
 												<i class="ion-arrow-down-b"></i> $63.94</span>
 										</li>
 										<li class="animate-item btn-ripple">
-											<span class="name">Sony Corp</span>
+											<span class="name">Friday</span>
+											<span class="price text-green">
+												<i class="ion-arrow-up-b"></i> $25.94</span>
+										</li>
+										<li class="animate-item btn-ripple">
+											<span class="name">Saturday</span>
+											<span class="price text-green">
+												<i class="ion-arrow-up-b"></i> $25.94</span>
+										</li>
+										<li class="animate-item btn-ripple">
+											<span class="name">Sunday</span>
 											<span class="price text-green">
 												<i class="ion-arrow-up-b"></i> $25.94</span>
 										</li>
@@ -325,28 +343,30 @@
 			<div class="full-content margin-top-40 margin-bottom-40 bg-white">
 				<div class="row">
 					<div class="col-md-4 material-animate padding-right-40">
-						<h4>Sales in 2014</h4>
-						<p class="text-grey">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after
-							installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+						<h4>Sales This Year (in Rupeess)</h4>
+						<p class="text-grey">Cupcake ipsum dolor sit. Amet I love liquorice jujubes pudding croissant I love pudding.
+							Apple pie macaroon toffee jujubes pie tart cookie applicake caramels. Halvah macaroon I love lollipop. Wypas I
+							love pudding brownie cheesecake tart jelly-o. Bear claw cookie chocolate bar jujubes toffee..</p>
 					</div>
 					<div class="col-md-8 material-animate">
 						<div class="chart chart-sales-by-year without-time"></div>
+						<!-- Yaha par without hata kar dekho time-->
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="display-animation">
 			<div class="row image-row margin-bottom-40">
-				<div class="col-md-4">
+				<div class="col-md-4" style="height:435px;overflow: scroll;">
 					<div class="card tile card-dashboard-info card-teal material-animate">
 						<div class="card-body">
 							<div class="card-icon">
 								<i class="fa fa-usd"></i>
 							</div>
-							<h4>Revenue</h4>
+							<h4>Table 1</h4>
 							<p class="result">$10,786</p>
 							<small>
-								<i class="fa fa-caret-up"></i> Total balance is $23,591</small>
+								<i class="fa fa-caret-up"></i> Successfully Received</small>
 						</div>
 					</div>
 					<div class="card tile card-dashboard-info card-light-blue material-animate">
@@ -354,20 +374,53 @@
 							<div class="card-icon">
 								<i class="fa fa-calculator"></i>
 							</div>
-							<h4>Open Invoices</h4>
-							<p class="result">26</p>
-							<small>Waiting to send</small>
+							<h4>Table 2</h4>
+							<p class="result">$10,786</p>
+							<small><i class="fa fa-caret-down"></i> Waiting to send</small>
 						</div>
 					</div>
-					<div class="card tile card-dashboard-info card-blue-grey material-animate">
+					<!-- <div class="card tile card-dashboard-info card-blue-grey material-animate">
 						<div class="card-body">
 							<div class="card-icon">
 								<i class="fa fa-thumbs-o-up"></i>
 							</div>
-							<h4>New Subscribers</h4>
-							<p class="result">183</p>
+							<h4>Table 3</h4>
+							<p class="result">$10,786</p>
 							<small>
-								<i class="fa fa-caret-up"></i> 9814 subscribers totally</small>
+								<i class="fa fa-caret-up"></i> Successfully Received</small>
+						</div>
+					</div> -->
+					<div class="card tile card-dashboard-info card-teal material-animate">
+						<div class="card-body">
+							<div class="card-icon">
+								<i class="fa fa-usd"></i>
+							</div>
+							<h4>Table 3</h4>
+							<p class="result">$10,786</p>
+							<small>
+								<i class="fa fa-caret-up"></i> Successfully Received</small>
+						</div>
+					</div>
+					<div class="card tile card-dashboard-info card-teal material-animate">
+						<div class="card-body">
+							<div class="card-icon">
+								<i class="fa fa-usd"></i>
+							</div>
+							<h4>Table 4</h4>
+							<p class="result">$10,786</p>
+							<small>
+								<i class="fa fa-caret-up"></i> Successfully Received</small>
+						</div>
+					</div>
+					<div class="card tile card-dashboard-info card-teal material-animate">
+						<div class="card-body">
+							<div class="card-icon">
+								<i class="fa fa-usd"></i>
+							</div>
+							<h4>Table 5</h4>
+							<p class="result">$10,786</p>
+							<small>
+								<i class="fa fa-caret-up"></i> Successfully Received</small>
 						</div>
 					</div>
 				</div>
@@ -383,17 +436,21 @@
 							</div>
 						</div>
 						<div class="card-body">
-							<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after
+							<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
+								users after
 								installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-							<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time
+							<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
+								for real-time
 								schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
-							<p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one
-								customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art
+							<p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate
+								one-to-one
+								customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the
+								art
 								customer service.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4" style="height:435px;overflow: scroll;">
 					<div class="card tile card-friend material-animate">
 						<a href="user-profile.html">
 							<img src="../../assets/globals/img/faces/1.jpg" class="user-photo" alt="">
@@ -401,9 +458,13 @@
 						<div class="friend-content">
 							<p class="title">Nicholas Murray</p>
 							<p>
-								<a href="user-profile.html">180 friends</a>
+								Booking for Table 1 at
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
 							</p>
-							<a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
 						</div>
 					</div>
 					<div class="card tile card-friend material-animate">
@@ -413,9 +474,13 @@
 						<div class="friend-content">
 							<p class="title">Jason Herrera</p>
 							<p>
-								<a href="user-profile.html">423 friends</a>
+								<a href="#">Booking for Table 1 at</a>
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
 							</p>
-							<a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
 						</div>
 					</div>
 					<div class="card tile card-friend material-animate">
@@ -425,9 +490,13 @@
 						<div class="friend-content">
 							<p class="title">Michael Bell</p>
 							<p>
-								<a href="user-profile.html">490 friends</a>
+								<a href="#">Booking for Table 1 at</a>
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
 							</p>
-							<a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
 						</div>
 					</div>
 					<div class="card tile card-friend material-animate">
@@ -437,9 +506,45 @@
 						<div class="friend-content">
 							<p class="title">Henry Allen</p>
 							<p>
-								<a href="user-profile.html">859 friends</a>
+								<a href="#">Booking for Table 1 at</a>
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
 							</p>
-							<a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
+						</div>
+					</div>
+					<div class="card tile card-friend material-animate">
+						<a href="user-profile.html">
+							<img src="../../assets/globals/img/faces/2.jpg" class="user-photo" alt="">
+						</a>
+						<div class="friend-content">
+							<p class="title">Jason Herrera</p>
+							<p>
+								<a href="#">Booking for Table 1 at</a>
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
+							</p>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
+						</div>
+					</div>
+					<div class="card tile card-friend material-animate">
+						<a href="user-profile.html">
+							<img src="../../assets/globals/img/faces/2.jpg" class="user-photo" alt="">
+						</a>
+						<div class="friend-content">
+							<p class="title">Jason Herrera</p>
+							<p>
+								<a href="#">Booking for Table 1 at</a>
+								<a href="#"> 12:00 pm</a>
+								<br>
+								<a> Visit Details </a>
+							</p>
+							<a class="btn btn-flat btn-primary btn-xs">Arrived</a>
+							<a class="btn btn-flat btn-primary btn-xs">Cancel</a>
 						</div>
 					</div>
 				</div>
@@ -474,7 +579,8 @@
 						</div>
 						<div class="panel-body">
 							<div class="knob-container margin-top-10">
-								<input class="knob" data-angleOffset="-125" data-fgColor="deep_purple" data-angleArc="250" data-readOnly="true" value="35">
+								<input class="knob" data-angleOffset="-125" data-fgColor="deep_purple" data-angleArc="250" data-readOnly="true"
+								 value="35">
 							</div>
 							<div class="chart-desc">
 								Collaboratively administrate empowered markets.
@@ -483,10 +589,10 @@
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-6">
-					<div class="panel helper-dashboard-height">
+					<div class="panel helper-dashboard-height" style="height:350px;overflow: scroll;">
 						<div class="panel-heading">
 							<div class="panel-title">
-								<h4>TIMELINE</h4>
+								<h4>TIMELINE - Currently Happening</h4>
 							</div>
 						</div>
 						<div class="panel-body horizontal-padding">
@@ -497,7 +603,8 @@
 									</div>
 									<span class="timeline-date">17 August 1999</span>
 									<div class="timeline-content">
-										The 1999 Kocaeli earthquake occurred with a moment magnitude of 7.4 that struck northwestern Turkey struck northwestern Turkey
+										The 1999 Kocaeli earthquake occurred with a moment magnitude of 7.4 that struck northwestern Turkey struck
+										northwestern Turkey
 									</div>
 								</div>
 								<div class="frame">
@@ -507,6 +614,36 @@
 									<span class="timeline-date">18 April 1906</span>
 									<div class="timeline-content">
 										The San Francisco earthquake of 1906 struck San Francisco on Wednesday, April 18, 1906.
+									</div>
+								</div>
+								<div class="frame">
+									<div class="timeline-badge">
+										<i class="fa fa-headphones"></i>
+									</div>
+									<span class="timeline-date">17 August 1999</span>
+									<div class="timeline-content">
+										The 1999 Kocaeli earthquake occurred with a moment magnitude of 7.4 that struck northwestern Turkey struck
+										northwestern Turkey
+									</div>
+								</div>
+								<div class="frame">
+									<div class="timeline-badge">
+										<i class="fa fa-headphones"></i>
+									</div>
+									<span class="timeline-date">17 August 1999</span>
+									<div class="timeline-content">
+										The 1999 Kocaeli earthquake occurred with a moment magnitude of 7.4 that struck northwestern Turkey struck
+										northwestern Turkey
+									</div>
+								</div>
+								<div class="frame">
+									<div class="timeline-badge">
+										<i class="fa fa-headphones"></i>
+									</div>
+									<span class="timeline-date">17 August 1999</span>
+									<div class="timeline-content">
+										The 1999 Kocaeli earthquake occurred with a moment magnitude of 7.4 that struck northwestern Turkey struck
+										northwestern Turkey
 									</div>
 								</div>
 							</div>
@@ -532,7 +669,7 @@
 	</div>
 	<div class="layer-container">
 
-		<div class="menu-layer">
+		<!--<div class="menu-layer">
 			<ul>
 				<li data-open-after="true">
 					<a href="index.html">Dashboard</a>
@@ -849,7 +986,7 @@
 					<a href="http://themeforest.net/item/pleasure-material-design-responsive-admin-panel/10579013">Buy Pleasure</a>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 
 
 		<div class="search-layer">
@@ -1034,7 +1171,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Pari Subramanium</span>
-										<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users
+										<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
+											procrastinate B2C users
 											after installed base benefits.</span>
 									</div>
 									<div class="list-action-right">
@@ -1050,7 +1188,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Andrew Fox</span>
-										<span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media
+										<span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI.
+											Efficiently unleash cross-media
 											information without cross-media value.</span>
 									</div>
 									<div class="list-action-right">
@@ -1066,7 +1205,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Lieke Vermeulen</span>
-										<span class="caption">Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without
+										<span class="caption">Quickly maximize timely deliverables for real-time schemas. Dramatically maintain
+											clicks-and-mortar solutions without
 											functional solutions.</span>
 									</div>
 									<div class="list-action-right">
@@ -1082,7 +1222,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Benjamin Beck</span>
-										<span class="caption">Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one
+										<span class="caption">Completely synergize resource sucking relationships via premier niche markets.
+											Professionally cultivate one-to-one
 											customer service with robust ideas.</span>
 									</div>
 									<div class="list-action-right">
@@ -1098,7 +1239,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Joshua Harris</span>
-										<span class="caption">Dynamically innovate resource-leveling customer service for state of the art customer service. Objectively innovate
+										<span class="caption">Dynamically innovate resource-leveling customer service for state of the art customer
+											service. Objectively innovate
 											empowered manufactured products whereas parallel platforms.</span>
 									</div>
 									<div class="list-action-right">
@@ -1114,7 +1256,8 @@
 									</div>
 									<div class="list-content">
 										<span class="title">Lisa Cooper</span>
-										<span class="caption">Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web
+										<span class="caption">Holisticly predominate extensible testing procedures for reliable supply chains.
+											Dramatically engage top-line web
 											services vis-a-vis cutting-edge deliverables.</span>
 									</div>
 									<div class="list-action-right">
@@ -1164,7 +1307,8 @@
 								</div>
 								<div class="message right">
 									<div class="message-text">Hi!</div>
-									<div class="message-text">Credibly innovate granular internal or "organic" sources whereas high standards in web-readiness. Energistically
+									<div class="message-text">Credibly innovate granular internal or "organic" sources whereas high standards in
+										web-readiness. Energistically
 										scale future-proof core competencies vis-a-vis impactful experiences.</div>
 									<img src="../../assets/globals/img/faces/tolga-ergin.jpg" class="user-picture" alt="">
 								</div>
@@ -1177,10 +1321,14 @@
 									<img src="../../assets/globals/img/faces/tolga-ergin.jpg" class="user-picture" alt="">
 								</div>
 								<div class="message left">
-									<div class="message-text">Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables
-										whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.</div>
-									<div class="message-text">Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes
-										through technically sound intellectual capital. Holistically foster superior methodologies without market-driven
+									<div class="message-text">Globally incubate standards compliant channels before scalable benefits. Quickly
+										disseminate superior deliverables
+										whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical
+										architectures.</div>
+									<div class="message-text">Credibly reintermediate backend ideas for cross-platform models. Continually
+										reintermediate integrated processes
+										through technically sound intellectual capital. Holistically foster superior methodologies without
+										market-driven
 										best practices.</div>
 									<img src="../../assets/globals/img/faces/1.jpg" class="user-picture" alt="">
 								</div>
@@ -1225,7 +1373,8 @@
 										<i class="ion-bag icon text-indigo"></i>
 									</div>
 									<div class="list-content">
-										<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users
+										<span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
+											procrastinate B2C users
 											after installed base benefits.</span>
 									</div>
 									<div class="list-action-right">
@@ -1243,7 +1392,8 @@
 										<i class="ion-image text-green icon"></i>
 									</div>
 									<div class="list-content">
-										<span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media
+										<span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI.
+											Efficiently unleash cross-media
 											information without cross-media value.</span>
 									</div>
 									<div class="list-action-right">
@@ -1261,7 +1411,8 @@
 										<img src="../../assets/globals/img/faces/13.jpg" class="face-radius" alt="">
 									</div>
 									<div class="list-content">
-										<span class="caption">Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without
+										<span class="caption">Quickly maximize timely deliverables for real-time schemas. Dramatically maintain
+											clicks-and-mortar solutions without
 											functional solutions.</span>
 									</div>
 									<div class="list-action-right">
@@ -1279,7 +1430,8 @@
 										<img src="../../assets/globals/img/faces/14.jpg" class="face-radius" alt="">
 									</div>
 									<div class="list-content">
-										<span class="caption">Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one
+										<span class="caption">Completely synergize resource sucking relationships via premier niche markets.
+											Professionally cultivate one-to-one
 											customer service with robust ideas.</span>
 									</div>
 									<div class="list-action-right">
@@ -1297,7 +1449,8 @@
 										<i class="ion-location text-light-blue icon"></i>
 									</div>
 									<div class="list-content">
-										<span class="caption">Dynamically innovate resource-leveling customer service for state of the art customer service. Objectively innovate
+										<span class="caption">Dynamically innovate resource-leveling customer service for state of the art customer
+											service. Objectively innovate
 											empowered manufactured products whereas parallel platforms.</span>
 									</div>
 									<div class="list-action-right">
@@ -1315,7 +1468,8 @@
 										<i class="ion-bookmark text-deep-orange icon"></i>
 									</div>
 									<div class="list-content">
-										<span class="caption">Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web
+										<span class="caption">Holisticly predominate extensible testing procedures for reliable supply chains.
+											Dramatically engage top-line web
 											services vis-a-vis cutting-edge deliverables.</span>
 									</div>
 									<div class="list-action-right">
@@ -1350,7 +1504,8 @@
 										<img src="../../assets/globals/img/faces/17.jpg" class="face-radius" alt="">
 									</div>
 									<div class="list-content">
-										<span class="caption">Synergistically evolve 2.0 technologies rather than just in time initiatives. Quickly deploy strategic networks
+										<span class="caption">Synergistically evolve 2.0 technologies rather than just in time initiatives. Quickly
+											deploy strategic networks
 											with compelling e-business. Credibly pontificate highly efficient manufactured products and enabled data.</span>
 									</div>
 									<div class="list-action-right">
@@ -1368,7 +1523,8 @@
 										<i class="ion-navigate text-indigo icon"></i>
 									</div>
 									<div class="list-content">
-										<span class="caption">Objectively pursue diverse catalysts for change for interoperable meta-services. Dramatically mesh low-risk high-yield
+										<span class="caption">Objectively pursue diverse catalysts for change for interoperable meta-services.
+											Dramatically mesh low-risk high-yield
 											alignments before transparent e-tailers.</span>
 									</div>
 									<div class="list-action-right">
@@ -1383,7 +1539,8 @@
 				<div class="tab-pane fade" id="settings">
 					<div class="col-md-6 col-md-offset-3">
 						<div class="settings-panel">
-							<p class="text-grey">Here's where you can check your settings of Pleasure Admin Panel. If you need an extra information from us, do not
+							<p class="text-grey">Here's where you can check your settings of Pleasure Admin Panel. If you need an extra
+								information from us, do not
 								hesitate to contact.</p>
 							<div class="legend">Privacy Controls</div>
 							<ul>
