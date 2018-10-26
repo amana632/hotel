@@ -198,7 +198,7 @@ def make_booking():
 
     return jsonify(new_booking)
 
-# endpoint to check whether user is already is registered
+# endpoint to find hotel id corresponding to user id
 @app.route("/hotelid/<user_id>", methods=["GET"])
 def getHotelId(user_id):
     data = Hotel.query.filter_by(user_id= user_id).first()
@@ -206,7 +206,11 @@ def getHotelId(user_id):
 
 
 
-
+# endpoint to find hotel id corrsponding to hotel name
+@app.route("/hotelid/<hotel_name>", methods=["GET"])
+def getHotelIdbyname(hotel_name):
+    data = Hotel.query.filter_by(hotel_name= hotel_name).first()
+    return jsonify(a=data.hotel_id)
 
 
 
