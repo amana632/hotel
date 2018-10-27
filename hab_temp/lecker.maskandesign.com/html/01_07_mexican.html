@@ -289,17 +289,19 @@
                                 </p>
                                 <div class="row lec_contacts_icons">
                                     <!-- <i class="ti ti-location-pin"></i> Raymond Boulevard 224 <br> -->
-                                    <span id="timing">
-                                        <i class="ti ti-time"></i>10:00 AM - 21:00 PM</span>
+                                    <span id="opening_time">
+                                        <i class="ti ti-time"></i>10:00 AM </span> -
+                                    <span id="closing_time">
+                                        <i class="ti ti-time"></i> 21:00 PM</span>
                                     <br>
-                                    <span id="timing">
+                                    <span id="hotel_email">
                                         <i class="ti ti-email"></i> info@themebusiness.com </span>
                                     <br>
-                                    <span id="phone_no">
+                                    <span id="contact">
                                         <i class="ti ti-mobile"></i>1-444-123-4559</span>
                                     <br>
-                                    <i class="ti ti-link"></i> www.yourwebsite.com
-                                    <br>
+                                    <!-- <i class="ti ti-link"></i> www.yourwebsite.com
+                                    <br> -->
                                 </div>
                                 <br>
                                 <a href="#" class="btn">Have A Dine With US
@@ -756,7 +758,7 @@
                                     <ul>
                                         <li>
                                             <!-- <a id="1" href="#" onclick="return changeFreq(this)">Book Table</a> -->
-                                            <a id="1" href="#" onclick="book(1)"data-toggle="modal" data-target="#exampleModalCenter" >Book Table</a>
+                                            <a id="1" href="#" onclick="book(1)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -816,7 +818,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="6" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
+                                            <a id="6" href="#" onclick="book(6)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -828,7 +830,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="7" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
+                                            <a id="7" href="#" onclick="book(7)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -840,7 +842,7 @@
                                 <div class="lr_tb_overlay_btn_wrapper">
                                     <ul>
                                         <li>
-                                            <a id="8" href="#" onclick="return changeFreq(this)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
+                                            <a id="8" href="#" onclick="book(8)" data-toggle="modal" data-target="#exampleModalCenter">Book Table</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -850,38 +852,6 @@
                         <!-- </div> -->
                     </div>
 
-<script>
-
-function book(x)
-{
-
-    localStorage.setItem("table-no",x);
-    console.log(localStorage.getItem("table-no"));
-    
-}
-
-function xhr()
-{
-    date_time=document.getElementById("date_time").value;
-    
-    user_ide=document.getElementById("user_id").value;
-    
-    hotel_id=document.getElementById("hotel_id").value;
-    
-    table_id=localStorage.getItem("table-no");
-    
-    checkin=document.getElementById("checkin").value; 
-
-
-     var xhr = new XMLHttpRequest();
-  xhr.onload = function(){ alert (xhr.responseText); } // success case
-  xhr.onerror = function(){ alert (xhr.responseText); } // failure case
-  xhr.open (oFormElement.method, oFormElement.action, true);
-  xhr.send (new FormData (oFormElement));
-  return false;
-}
-
-</script>
 
 
 
@@ -929,14 +899,14 @@ function xhr()
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" action="http://127.0.0.1:8080/booking">
-                                <input hidden type= "text" name= "user_id"  id="user_id"> 
-                                <input hidden type= "text" name="hotel_id" id="hotel_id">
-                                <input hidden type= "text" name="table_id" id="table_id">
-                                <input hidden type= "text" name="waiter_id" id="waiter_id">
-                                <input hidden type= "boolean" name="checkin" id="checkin" value="FALSE">
+                            <form method="POST" action="http://127.0.0.1:8080/booking">
+                                <input hidden type="text" name="user_id" id="user_id">
+                                <input hidden type="text" name="hotel_id" id="hotel_id">
+                                <input hidden type="text" name="table_id" id="table_id">
+                                <input hidden type="text" name="waiter_id" id="waiter_id">
+                                <input hidden type="boolean" name="checkin" id="checkin" value="FALSE">
                                 <input type="datetime-local" id="date_time" name="date_time">
-                         </form>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -1207,9 +1177,84 @@ function xhr()
                                 <span class="lec_news_img lec_image_bck" data-image="images/slider/sl4.jpg"></span>
                             </span>
                             <span class="lec_gold lec_title_animation lec_wht_txt">Jan 14</span>
-                            <span class="lec_news_title lec_gold_subtitle">Restaurant stocks rebound, at least somewhat</span>
-                            <p>Increase in NRN Restaurant Index doesn’t erase a difficult 2016...</p>
+                            <s <script src="../../assets/globals/js/global-vendors.js">
+                                </script>
+
+
+                                <script src="https://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script>
+                                <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script>
+                                <script src="../../assets/globals/plugins/bxslider/jquery.bxslider.min.js"></script>
+                                <script src="../../assets/globals/plugins/audiojs/audiojs/audio.min.js"></script>
+                                <script src="../../assets/globals/plugins/d3/d3.min.js"></script>
+                                <script src="../../assets/globals/plugins/rickshaw/rickshaw.min.js"></script>
+                                <script src="../../assets/globals/plugins/jquery-knob/excanvas.js"></script>
+                                <script src="../../assets/globals/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+                                <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script>
+
+
+                                <script src="../../assets/globals/js/pleasure.js"></script>
+
+                                <script src="../../assets/admin1/js/layout.js"></script>
+                                <script src="../../assets/globals/scripts/sliders.js"></script>
+                                <script src="../../assets/globals/scripts/maps-google.js"></script>
+                                <script src="../../assets/globals/scripts/widget-audio.js"></script>
+                                <script src="../../assets/globals/scripts/charts-knob.js"></script>
+                                <script src="../../assets/globals/scripts/index.js"></script>
+
+
+                                <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>ass="lec_news_title lec_gold_subtitle">Restaurant stocks rebound, at least somewhat</span>
+                                <p <script src="../../assets/globals/js/global-vendors.js">
+                                    </script>
+
+
+                                    <script src="https://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script>
+                                    <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script>
+                                    <script src="../../assets/globals/plugins/bxslider/jquery.bxslider.min.js"></script>
+                                    <script src="../../assets/globals/plugins/audiojs/audiojs/audio.min.js"></script>
+                                    <script src="../../assets/globals/plugins/d3/d3.min.js"></script>
+                                    <script src="../../assets/globals/plugins/rickshaw/rickshaw.min.js"></script>
+                                    <script src="../../assets/globals/plugins/jquery-knob/excanvas.js"></script>
+                                    <script src="../../assets/globals/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+                                    <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script>
+
+
+                                    <script src="../../assets/globals/js/pleasure.js"></script>
+
+                                    <script src="../../assets/admin1/js/layout.js"></script>
+                                    <script src="../../assets/globals/scripts/sliders.js"></script>
+                                    <script src="../../assets/globals/scripts/maps-google.js"></script>
+                                    <script src="../../assets/globals/scripts/widget-audio.js"></script>
+                                    <script src="../../assets/globals/scripts/charts-knob.js"></script>
+                                    <script src="../../assets/globals/scripts/index.js"></script>
+
+
+                                    <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>ase in NRN Restaurant Index doesn’t erase a difficult 2016...</p>
                         </div>
+                        <script src="../../assets/globals/js/global-vendors.js"></script>
+
+
+                        <script src="https://maps.google.com/maps/api/js?sensor=true&amp;libraries=places"></script>
+                        <script src="../../assets/globals/plugins/gmaps/gmaps.js"></script>
+                        <script src="../../assets/globals/plugins/bxslider/jquery.bxslider.min.js"></script>
+                        <script src="../../assets/globals/plugins/audiojs/audiojs/audio.min.js"></script>
+                        <script src="../../assets/globals/plugins/d3/d3.min.js"></script>
+                        <script src="../../assets/globals/plugins/rickshaw/rickshaw.min.js"></script>
+                        <script src="../../assets/globals/plugins/jquery-knob/excanvas.js"></script>
+                        <script src="../../assets/globals/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
+                        <script src="../../assets/globals/plugins/gauge/gauge.min.js"></script>
+
+
+                        <script src="../../assets/globals/js/pleasure.js"></script>
+
+                        <script src="../../assets/admin1/js/layout.js"></script>
+                        <script src="../../assets/globals/scripts/sliders.js"></script>
+                        <script src="../../assets/globals/scripts/maps-google.js"></script>
+                        <script src="../../assets/globals/scripts/widget-audio.js"></script>
+                        <script src="../../assets/globals/scripts/charts-knob.js"></script>
+                        <script src="../../assets/globals/scripts/index.js"></script>
+
+
+                        <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
 
                         <!-- item -->
                         <div class="lec_news_block text-center">
@@ -1594,6 +1639,12 @@ function xhr()
             console.log(o);
             document.getElementById("title").innerText = o.hotel_name;
             document.getElementById("desc").innerText = o.hotel_desc;
+            document.getElementById("hotel_email").innerText = o.hotel_email;
+            document.getElementById("contact").innerText = o.contact;
+            document.getElementById("opening_time").innerText = o.opening_time;
+            document.getElementById("closing_time").innerText = o.closing_time;
+            document.getElementById("hotel_email").innerText = o.hotel_email;
+
             document.getElementById("special_monday").innerText = o.special_monday;
             document.getElementById("special_tuesday").innerText = o.special_tuesday;
             document.getElementById("special_wednesday").innerText = o.special_wednesday;
@@ -1601,7 +1652,15 @@ function xhr()
             document.getElementById("special_friday").innerText = o.special_friday;
             document.getElementById("special_saturday").innerText = o.special_saturday;
             document.getElementById("bestsellers").innerText = o.bestsellers;
+
+
+
+
+
+
+
         }
+
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
         var t = parseInt(window.localStorage.getItem("hotel_id"));
@@ -1648,27 +1707,28 @@ function xhr()
             return false;
         }
         function xhr() {
-            var url = "http://localhost:8080/";
+            var user_id = window.localStorage.getItem("user_id");
+            var table_id = window.localStorage.getItem("table_id");
+            var hotel_id = window.localStorage.getItem("hotel_id");
 
-            var data = {};
-            // data.firstname = "John2";
-            // data.lastname  = "Snow2";
-            var json = JSON.stringify(data);
+            var o;
+            function reqListener() {
+                o = JSON.parse(this.responseText);
+                console.log(o);
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("PUT", url+'/12', true);
-            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
-                xhr.onload = function () {
-                var users = JSON.parse(xhr.responseText);
-                    if (xhr.readyState == 4 && xhr.status == "200") {
-                        console.table(users);
-                    } else {
-                        console.error(users);
-                    }
-                }
-            xhr.send(json);
+                document.getElementById("user_id").innerText = user_id;
+                document.getElementById("table_id").innerText = table_id;
+                document.getElementById("hotel_id").innerText = hotel_id;
+                document.getElementById("waiter_id") = o.waiter_id;
+
+
             }
 
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", reqListener);
+            oReq.open("GET", "http://127.0.0.1:8080/booking_table;");
+            oReq.send();
+        }
     </script>
 
 </body>
