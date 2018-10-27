@@ -108,7 +108,10 @@ def add_hotels():
 
     db.session.add(new_hotel)
     db.session.commit()
+<<<<<<< HEAD
 
+=======
+>>>>>>> c77ab6c7686700088dac80949ac043f7b06aabaf
 
 # endpoint to show all hotelss
 @app.route("/hotels", methods=["GET"])
@@ -162,7 +165,6 @@ def add_user():
 
     db.session.add(new_user)
     db.session.commit()
-    return user_schema.jsonify(new_user)
 
 
 # endpoint to check whether user is already is registered
@@ -224,7 +226,6 @@ def add_waiter():
     db.session.add(new_waiter)
     db.session.commit()
 
-    return jsonify(new_waiter)
 
 
 # endpoint to add a new chef
@@ -240,7 +241,6 @@ def add_chef():
     db.session.add(new_chef)
     db.session.commit()
 
-    return jsonify(new_chef)
 
 
 # endpoint to give id to tables
@@ -254,7 +254,6 @@ def add_table():
     db.session.add(new_table)
     db.session.commit()
 
-    return jsonify(new_table)
 
 
 # endpoint to post the menu
@@ -271,7 +270,6 @@ def add_menu():
     db.session.add(new_menu)
     db.session.commit()
 
-    return jsonify(new_menu)
 
 
 # endpoint to make a booking
@@ -289,7 +287,6 @@ def make_booking():
     db.session.add(new_booking)
     db.session.commit()
 
-    return jsonify(new_booking)
 
 
 # endpoint to find hotel id corresponding to user id
@@ -359,7 +356,6 @@ def make_transaction():
     db.session.add(new_transaction)
     db.session.commit()
 
-    return jsonify(new_transaction)
 
 
 # payment ki api
@@ -377,10 +373,52 @@ def make_payment():
     db.session.add(new_payment)
     db.session.commit()
 
-    return jsonify(new_payment)
 
 
+<<<<<<< HEAD
 # update ki apis
+=======
+
+#update ki apis
+
+
+
+
+
+
+
+
+
+#order ki api
+@app.route("/orderkaro", methods=["POST"])
+def order_karo():
+    item_id = request.form['item_id']
+    quantity = request.form['quantity']
+    price = request.form['price']
+    waiter_id = request.form['waiter_id']
+    user_id = request.form['user_id']
+    booking_id =  request.form['booking_id']
+
+    new_order = Order(item_id, quantity, price, waiter_id, user_id, booking_id)
+
+    db.session.add(new_order)
+    db.session.commit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> c77ab6c7686700088dac80949ac043f7b06aabaf
 
 
 # heatmap ki api

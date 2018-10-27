@@ -149,7 +149,8 @@
           <img src="assets/svg/wave-static-02.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
           <img src="assets/svg/wave-static-01.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
         </div>
-        <div class="ts-background-image ts-parallax-element" data-bg-color="#d24354" data-bg-image="assets/img/bg-girl-01.jpg" data-bg-blend-mode="multiply"></div>
+        <div class="ts-background-image ts-parallax-element" data-bg-color="#d24354" data-bg-image="assets/img/bg-girl-01.jpg"
+          data-bg-blend-mode="multiply"></div>
       </div>
 
 
@@ -242,8 +243,10 @@
                     <path class="path-1" fill="" d="M120.927 22.389v11.095h-4.566V22.389a371.288 371.288 0 0 0-2.086-2.888 347.047 347.047 0 0 1-2.2-3.053 386.86 386.86 0 0 0-2.201-3.053c-.7-.959-1.395-1.922-2.086-2.888h5.617l5.255 7.287 5.222-7.287h5.649c.002 0-8.604 11.882-8.604 11.882zM98.034 33.484h-4.565V15.069h-6.372v-4.562h17.244v4.562h-6.306v18.415zm-21.908 0H71.56V15.069h-6.372v-4.562h17.244v4.562h-6.306v18.415zm-17.425-1.789c-.69.623-1.511 1.116-2.463 1.477-.953.361-1.987.542-3.104.542-1.007 0-1.982-.143-2.923-.427a10.814 10.814 0 0 1-2.661-1.214h.033a9.928 9.928 0 0 1-1.577-1.215 18.73 18.73 0 0 1-.953-.952l3.416-3.151c.153.197.399.432.739.706.339.274.728.537 1.166.788.44.253.902.467 1.38.64.481.175.941.262 1.379.262.372 0 .744-.044 1.117-.131.359-.082.703-.22 1.018-.41.305-.185.564-.437.755-.739.197-.306.296-.689.296-1.149 0-.175-.06-.366-.181-.574-.12-.208-.329-.432-.624-.673-.296-.241-.706-.498-1.232-.771a20.567 20.567 0 0 0-1.971-.87 25.42 25.42 0 0 1-2.562-1.132 8.896 8.896 0 0 1-2.053-1.428 5.903 5.903 0 0 1-1.347-1.871c-.317-.7-.476-1.51-.476-2.429 0-.94.175-1.822.526-2.642a6.21 6.21 0 0 1 1.494-2.133c.646-.602 1.423-1.072 2.332-1.412.908-.339 1.911-.509 3.006-.509.591 0 1.22.077 1.889.23.668.153 1.319.35 1.954.591a12.95 12.95 0 0 1 1.79.837c.558.317 1.023.64 1.396.968l-2.825 3.545a15.71 15.71 0 0 0-1.281-.788 10.316 10.316 0 0 0-1.281-.558 4.311 4.311 0 0 0-1.478-.263c-.919 0-1.637.181-2.151.542-.515.361-.772.881-.772 1.559 0 .307.093.586.279.837.186.252.438.482.756.689.348.225.717.417 1.1.574.416.176.854.34 1.314.492 1.314.504 2.42 1.013 3.318 1.526.898.514 1.62 1.062 2.168 1.642s.936 1.204 1.166 1.871c.23.668.345 1.395.345 2.183 0 .963-.197 1.871-.591 2.724a6.803 6.803 0 0 1-1.626 2.216zM34.839 10.507h4.532v22.977h-4.532V10.507zm-20.036 0h4.566v18.415h9.263v4.563H14.803V10.507z"/>
                   </svg>
                 </a> -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
                 consequat. Duis aute irure dolor</p>
               <ul class="list-styled list-contact">
                 <li>
@@ -369,23 +372,53 @@
 
   <script>
     var o;
-    var locs = [];
+    var locations = [];
 
     function reqListener() {
       o = JSON.parse(this.responseText);
       console.log(o);
       for (var i = 0; i < o.a.length; i++) {
-        var arrr = [];
-        arrr = arrr.concat(JSON.stringify(o.a[i].hotel_lat));
-        arrr = arrr.concat(JSON.stringify(o.a[i].hotel_long));
-        console.log(locs);
-        locs = locs.concat(JSON.stringify(arrr));
+
+        var o1;
+        var x = o.a[i].hotel_id;
+        function reqListener1() {
+          o1 = JSON.parse(this.responseText);
+          console.log(o1);
+          var p = 0;
+          var q = 0;
+          var t;
+          for (var k = 0; k < o1.a.length; k++) {
+            if (o1.a[k].status = 0) { p = p + 1; }
+            else { q = q + 1; }
+            t = `${p} filled out of ${p + q}`
+
+
+            var arrr = [];
+            arrr = arrr.concat(JSON.stringify(t));
+
+            arrr = arrr.concat(JSON.stringify(o.a[i].hotel_lat));
+            arrr = arrr.concat(JSON.stringify(o.a[i].hotel_long));
+            console.log(locs);
+            locations = locations.concat(JSON.stringify(arrr));
+
+          }
+
+
+        }
+
+        var oReq1 = new XMLHttpRequest();
+        oReq1.addEventListener("load", reqListener);
+        oReq1.open("GET", `http://3.16.56.169/table/${x}`);
+        oReq1.send();
+
+
       }
+
     }
 
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", reqListener);
-    oReq.open("GET", "http://127.0.0.1:8080/hotels");
+    oReq.open("GET", "http://3.16.56.169/hotels");
     oReq.send();
 
 
@@ -393,27 +426,107 @@
     // this map is now working
 
     // Initialize and add the map
-    function initMap() {
+    // function initMap() {
 
-      // The location of Uluru
-      var uluru = { lat: -25.344, lng: 131.036 };
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 4, center: uluru });
-      // var locs = [["41.065294480291", "-85.330151019708"], ["42.065294480291", "-85.330151019708"], ["43.065294480291", "-85.330151019708"], ["44.065294480291", "-85.330151019708"]];
-      for (var i = 0; i < locs.length; i++) {
-        var x = JSON.parse(locs[i]);
-        var Latlng_1 = new google.maps.LatLng(x[0], x[1]);
-        var marker_1 = new google.maps.Marker({
-          position: Latlng_1,
-          title: "1"
-        });
-        marker_1.setMap(map);
+    //   // The location of Uluru
+    //   var uluru = { lat: -25.344, lng: 131.036 };
+    //   // The map, centered at Uluru
+    //   var map = new google.maps.Map(
+    //     document.getElementById('map'), { zoom: 4, center: uluru });
+    //   // var locs = [["41.065294480291", "-85.330151019708"], ["42.065294480291", "-85.330151019708"], ["43.065294480291", "-85.330151019708"], ["44.065294480291", "-85.330151019708"]];
+    //   for (var i = 0; i < locs.length; i++) {
+    //     var x = JSON.parse(locs[i]);
+    //     var Latlng_1 = new google.maps.LatLng(x[0], x[1]);
+    //     var marker_1 = new google.maps.Marker({
+    //       position: Latlng_1,
+    //       title: "1"
+    //     });
+    //     marker_1.setMap(map);
+    //   }
+    // }
+
+
+    // var locations = [
+    //   ['<h4>Bondi Beach</h4>', -33.890542, 151.274856],
+    //   ['<h4>Coogee Beach</h4>', -33.923036, 151.259052],
+    //   ['<h4>Cronulla Beach</h4>', -34.028249, 151.157507],
+    //   ['<h4>Manly Beach</h4>', -33.80010128657071, 151.28747820854187],
+    //   ['<h4>Maroubra Beach</h4>', -33.950198, 151.259302]
+    // ];
+
+    // Setup the different icons and shadows
+    var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
+
+    var icons = [
+      iconURLPrefix + 'red-dot.png',
+      iconURLPrefix + 'green-dot.png',
+      iconURLPrefix + 'blue-dot.png',
+      iconURLPrefix + 'orange-dot.png',
+      iconURLPrefix + 'purple-dot.png',
+      iconURLPrefix + 'pink-dot.png',
+      iconURLPrefix + 'yellow-dot.png'
+    ]
+    var iconsLength = icons.length;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-37.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+      streetViewControl: false,
+      panControl: false,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      }
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      maxWidth: 160
+    });
+
+    var markers = new Array();
+
+    var iconCounter = 0;
+
+    // Add the markers and infowindows to the map
+    for (var i = 0; i < locations.length; i++) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: icons[iconCounter]
+      });
+
+      markers.push(marker);
+
+      google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+
+      iconCounter++;
+      // We only have a limited number of possible icon colors, so we may have to restart the counter
+      if (iconCounter >= iconsLength) {
+        iconCounter = 0;
       }
     }
+
+    function autoCenter() {
+      //  Create a new viewpoint bound
+      var bounds = new google.maps.LatLngBounds();
+      //  Go through each...
+      for (var i = 0; i < markers.length; i++) {
+        bounds.extend(markers[i].position);
+      }
+      //  Fit these bounds to the map
+      map.fitBounds(bounds);
+    }
+    autoCenter();
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&callback=initMap">
-  </script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&callback=initMap">
+  </script> -->
 
 
 
