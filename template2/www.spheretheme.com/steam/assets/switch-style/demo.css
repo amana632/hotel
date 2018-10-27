@@ -1,0 +1,222 @@
+/*------------------------------------------------------------------
+/*  Theme Name  : STEAM Restaurant and Drinks
+/*  Theme URI   : http://www.spheretheme.com/steam
+/*  Description : STEAM - Restaurant, food and Drinks HTML5 website template is Modern, Clean and Professional site template.
+/*  Version     : 1.0
+/*  assets/switch-style/demo.css
+/*-----------------------------------------------------------------------
+*/
+/*This style is only use in demo page*/
+
+.banner-detail{
+    padding: 200px 0 200px 0;
+}
+.banner-detail h4{
+    font-size: 36px;
+}
+.single-demo {
+    background: #fff;
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.6);
+    box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.6);
+}
+.single-demo:hover{
+    box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.demo-area {
+    background: #f1f1f1 none repeat scroll 0 0;
+}
+.demo-img {
+    background: rgba(0, 0, 0, 0) none no-repeat scroll center top / cover ;
+    position: relative;
+    transition: background 4s ease 0s;
+    -webkit-transition: background 4s ease 0s;
+    -moz-transition: background 4s ease 0s;
+}
+.demo-img > a{
+    position:relative;
+    z-index:9;
+    display:block;
+}
+.demo-img > a > img{
+    width: 100%;
+}
+.demo-img > a::after {
+    background-color: #000;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    z-index:1;
+    width:100%;
+    height:100%;
+    opacity:0;
+}
+.single-demo:hover .demo-img a::after {
+    opacity: .7;
+}
+.demo-img > a::before {
+    color: #fff;
+    content: "Live Preview";
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 1px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    z-index: 999;
+}
+.single-demo:hover  .demo-img > a:before{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    opacity:1;
+}
+.demo-content {
+    background: #131619 none repeat scroll 0 0;
+    border-top: 2px solid #f9690e;
+    padding: 30px 0;
+}
+.demo-content h3 {
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight:500;
+}
+.demo-content h3 a {
+    color: #fff;
+}
+.demo-content h3 a:hover{
+    color:#f9690e;
+}
+.theme-features {
+    background-color: #fff;
+    padding-bottom: 50px;
+}
+.theme-features .thumbnail {
+    min-height: 250px;
+    max-height: 250px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 50px 30px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.theme-features .thumbnail i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    color: #2c50b1;
+    border: 1px solid #e54c2a;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.theme-features .thumbnail i:before {
+    margin: 0;
+    font-size: 40px;
+    color: #e54c2a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.theme-features .thumbnail h3 {
+    font-size: 18px;
+    color: #000;
+    line-height: 25px;
+}
+.theme-features .thumbnail:hover {
+    border-color: #e54c2a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.theme-features .thumbnail:hover i {
+    border-color: #e54c2a;
+    color: #fff;
+    background-color: #e54c2a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.theme-features .thumbnail:hover i:before {
+    color: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+.cta{
+    background:url(../images/background/reservation_bg.jpg) center center no-repeat;
+    background-size: cover;
+    width:100%;
+    padding:75px 0; 
+}
+.cta h4{
+    font-size: 30px;
+    color: #fff;
+    line-height: 45px;
+    font-weight: 500;
+}
+.cta .btn{
+    margin-top: 25px;
+}
+.btn-wide {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+@media (max-width: 992px) {
+    .banner-detail h4 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .banner-detail h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner-detail{
+        padding: 100px 0 100px 0;
+    }
+    .theme-features .thumbnail{
+        padding: 20px 10px;
+        min-height: 200px;
+        max-height: 200px;
+    }
+    .cta h4 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+}
