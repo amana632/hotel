@@ -43,7 +43,6 @@ def add_hotels():
 
     db.session.add(new_hotel)
     db.session.commit()
-    return jsonify(a=new_hotel)
 
 # endpoint to show all hotelss
 @app.route("/hotels", methods=["GET"])
@@ -75,7 +74,6 @@ def add_user():
 
     db.session.add(new_user)
     db.session.commit()
-    return user_schema.jsonify(new_user)
 
 # endpoint to check whether user is already is registered
 @app.route("/isRegisteredUser/<phone>", methods=["GET"])
@@ -134,7 +132,6 @@ def add_waiter():
     db.session.add(new_waiter)
     db.session.commit()
 
-    return jsonify(new_waiter)
 
 
 # endpoint to add a new chef
@@ -150,7 +147,6 @@ def add_chef():
     db.session.add(new_chef)
     db.session.commit()
 
-    return jsonify(new_chef)
 
 # endpoint to give id to tables
 @app.route("/table", methods=["POST"])
@@ -163,7 +159,6 @@ def add_table():
     db.session.add(new_table)
     db.session.commit()
 
-    return jsonify(new_table)
 
 #endpoint to post the menu
 @app.route("/menu", methods=["POST"])
@@ -179,7 +174,6 @@ def add_menu():
     db.session.add(new_menu)
     db.session.commit()
 
-    return jsonify(new_menu)
 
 #endpoint to make a booking
 @app.route("/booking", methods=["POST"])
@@ -196,7 +190,6 @@ def make_booking():
     db.session.add(new_booking)
     db.session.commit()
 
-    return jsonify(new_booking)
 
 # endpoint to find hotel id corresponding to user id
 @app.route("/hotelid/<user_id>", methods=["GET"])
@@ -272,7 +265,6 @@ def make_transaction():
     db.session.add(new_transaction)
     db.session.commit()
 
-    return jsonify(new_transaction)
 
 #payment ki api
 @app.route("/payment", methods=["POST"])
@@ -289,7 +281,6 @@ def make_payment():
     db.session.add(new_payment)
     db.session.commit()
 
-    return jsonify(new_payment)
 
 
 
@@ -303,6 +294,20 @@ def make_payment():
 
 
 
+#order ki api
+@app.route("/orderkaro", methods=["POST"])
+def order_karo():
+    item_id = request.form['item_id']
+    quantity = request.form['quantity']
+    price = request.form['price']
+    waiter_id = request.form['waiter_id']
+    user_id = request.form['user_id']
+    booking_id =  request.form['booking_id']
+
+    new_order = Order(item_id, quantity, price, waiter_id, user_id, booking_id)
+
+    db.session.add(new_order)
+    db.session.commit()
 
 
 
