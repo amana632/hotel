@@ -242,7 +242,12 @@ def waiter_detail(hotel_id):
     return jsonify(a=result.data)
 
 
+@app.route("/order/<user_id>", methods=["GET"])
+def orders_detail(user_id):
+    all_orders = Order.query.filter_by(user_id= user_id).all()
+    result = orders_schema.dump(all_orders)
 
+    return jsonify(a=result.data)
 
 
 

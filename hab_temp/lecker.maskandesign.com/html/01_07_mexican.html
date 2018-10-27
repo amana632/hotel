@@ -899,18 +899,19 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="http://127.0.0.1:8080/booking">
+                            <form method="POST" action="http://3.16.56.169:8080/booking">
                                 <input hidden type="text" name="user_id" id="user_id">
                                 <input hidden type="text" name="hotel_id" id="hotel_id">
                                 <input hidden type="text" name="table_id" id="table_id">
                                 <input hidden type="text" name="waiter_id" id="waiter_id">
-                                <input hidden type="boolean" name="checkin" id="checkin" value="FALSE">
+                                <input hidden type="boolean" name="checkin" id="checkin" value=0> Enter Date And Time Of Your Arrival
+                                <br>
                                 <input type="datetime-local" id="date_time" name="date_time">
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="return xhr();">Save changes</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" onclick="return xhr();">Save changes</button>
                         </div>
                     </div>
                 </div>
@@ -1655,85 +1656,53 @@
 
 
 
-
-
-
-
         }
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
         var t = parseInt(window.localStorage.getItem("hotel_id"));
-        oReq.open("GET", `http://127.0.0.1:8080/hotels/${t}`);
+        oReq.open("GET", `http://3.16.56.169:8080/hotels/${t}`);
         oReq.send();
 
-        function changeFreq(element) {
-            // window.localStorage.setItem("table_id", element.id);
-            // document.getElementById("exampleModalLongTitle").innerText = element.id;
 
-            console.log(element.id);
+        function book(x) {
+
+            localStorage.setItem("table_id", x);
+            console.log(localStorage.getItem("table_id"));
             var o;
-            var user = parseInt(window.localStorage.getItem("user_id"));
-            var hotel = parseInt(window.localStorage.getItem("hotel_id"));
+            var user_id = parseInt(window.localStorage.getItem("user_id"));
+            var hotel_id = parseInt(window.localStorage.getItem("hotel_id"));
+            var table_id = parseInt(window.localStorage.getItem("table_id"));
             function reqListener() {
                 o = JSON.parse(this.responseText);
                 console.log(o);
-                documecnt.getElementById("user_id").innerText = user;
-                documecnt.getElementById("hotel_id").innerText = hotel;
-                documecnt.getElementById("table_id").innerText = element.id;
-                documecnt.getElementById("waiter_id").innerText = o.waiter_id;
+                documecnt.getElementById("user_id").innerText = user_id;
+                documecnt.getElementById("hotel_id").innerText = hotel_id;
+                documecnt.getElementById("table_id").innerText = table_id;
+                documecnt.getElementById("waiter_id").innerText = o.a.waiter_id;
             }
+
             var oReq = new XMLHttpRequest();
             oReq.addEventListener("load", reqListener);
-            oReq.open("GET", `http://127.0.0.1:8080/waiter/${hotel}`);
+            oReq.open("GET", `http://3.16.56.169:8080/waiter/${hotel_id}`);
             oReq.send();
-
-            // var o;
-            // var user = parseInt(window.localStorage.getItem("user_id"));
-            // var hotel = parseInt(window.localStorage.getItem("hotel_id"));
-            // function reqListener() {
-            //     o = JSON.parse(this.responseText);
-            //     console.log(o);
-            //     documecnt.getElementById("user_id").innerText = user;
-            //     documecnt.getElementById("hotel_id").innerText = hotel;
-            //     documecnt.getElementById("table_id").innerText = element.id;
-            //     documecnt.getElementById("waiter_id").innerText = o.waiter_id;
-            // }
-            // var oReq = new XMLHttpRequest();
-            // oReq.addEventListener("load", reqListener);
-            // oReq.open("GET", `http://127.0.0.1:8080/waiter/${hotel}`);
-            // oReq.send();
 
             return false;
+
         }
+
+
         function xhr() {
             var txt;
-            if (confirm("Press a button!")) {
+            if (confirm("Table has been Booked! Continue with Ordering Food ??")) {
                 txt = "You pressed OK!";
+                window.location.href = '/home/amana632/Desktop/shubhaarambh/hotel/template2/www.spheretheme.com/steam/shop.html';
             } else {
-                txt = "You pressed Cancel!";
+                txt = "You pressed Cancel !";
             }
-            var user_id = window.localStorage.getItem("user_id");
-            var table_id = window.localStorage.getItem("table_id");
-            var hotel_id = window.localStorage.getItem("hotel_id");
-
-            var o;
-            function reqListener() {
-                o = JSON.parse(this.responseText);
-                console.log(o);
-
-                document.getElementById("user_id").innerText = user_id;
-                document.getElementById("table_id").innerText = table_id;
-                document.getElementById("hotel_id").innerText = hotel_id;
-                document.getElementById("waiter_id") = o.waiter_id;
-
-
-            }
-
-            var oReq = new XMLHttpRequest();
-            oReq.addEventListener("load", reqListener);
-            oReq.open("GET", "http://127.0.0.1:8080/booking_table;");
-            oReq.send();
+            // var user_id = window.localStorage.getItem("user_id");
+            // var table_id = window.localStorage.getItem("table_id");
+            // var hotel_id = window.localStorage.getItem("hotel_id");
         }
     </script>
 

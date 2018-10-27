@@ -381,7 +381,7 @@
                             var phone = document.getElementById("phone").value;
                             var password = document.getElementById("pass").value;
                             var user_type = document.getElementById("type").value;
-                            var url = "http://127.0.0.1:8080/isValidUser";
+                            var url = "http://3.16.56.169:8080/isValidUser";
                             var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                             var oReq = new XMLHttpRequest();
                             oReq.addEventListener("load", reqListener1);
@@ -399,7 +399,7 @@
                     var phone1 = document.getElementById("phone").value;
                     // var password = document.getElementById("pass").value;
                     // var user_type = document.getElementById("type").value;
-                    var url1 = `http://127.0.0.1:8080/isRegisteredUser/${phone1}`;
+                    var url1 = `http://3.16.56.169:8080/isRegisteredUser/${phone1}`;
                     // var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                     var oReq1 = new XMLHttpRequest();
                     oReq1.addEventListener("load", reqListener);
@@ -435,7 +435,7 @@
                     <input type="submit" value="Submit">
                   </form> -->
 
-                <form action="http://127.0.0.1:8080/user" method="POST">
+                <form action="http://3.16.56.169:8080/user" method="POST">
                     <label>
                         <span>User Name:</span>
                         <input type="text" name="username" value="">
@@ -547,7 +547,7 @@
         //                 'Access-Control-Allow-Methods': 'POST',
         //                 'Access-Control-Allow-Headers': 'Content-Type'
         //             },
-        //             url: 'http://127.0.0.1:8080/isValidUser',
+        //             url: 'http://3.16.56.169:8080/isValidUser',
         //             //Your api url
         //             type: 'GET',   //type is any HTTP method
         //             contentType: "application/form",
