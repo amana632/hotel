@@ -369,10 +369,18 @@
 
   <script>
     var o;
+    var locs = [];
+
     function reqListener() {
       o = JSON.parse(this.responseText);
       console.log(o);
-
+      for (var i = 0; i < o.a.length; i++) {
+        var arrr = [];
+        arrr = arrr.concat(JSON.stringify(o.a[i].hotel_lat));
+        arrr = arrr.concat(JSON.stringify(o.a[i].hotel_long));
+        console.log(locs);
+        locs = locs.concat(JSON.stringify(arrr));
+      }
     }
 
     var oReq = new XMLHttpRequest();
@@ -380,11 +388,6 @@
     oReq.open("GET", "http://127.0.0.1:8080/hotels");
     oReq.send();
 
-    var arr = [];
-    for (var i = 0; i < locs.length; i++) {
-      arr = arr.concat(temp2.a[i].hotel_lat);
-      arr = arr.concat(temp2.a[i].hotel_lang);
-    }
 
 
     // this map is now working
@@ -397,9 +400,10 @@
       // The map, centered at Uluru
       var map = new google.maps.Map(
         document.getElementById('map'), { zoom: 4, center: uluru });
-      var locs = [["41.065294480291", "-85.330151019708"], ["42.065294480291", "-85.330151019708"], ["43.065294480291", "-85.330151019708"], ["44.065294480291", "-85.330151019708"]];
+      // var locs = [["41.065294480291", "-85.330151019708"], ["42.065294480291", "-85.330151019708"], ["43.065294480291", "-85.330151019708"], ["44.065294480291", "-85.330151019708"]];
       for (var i = 0; i < locs.length; i++) {
-        var Latlng_1 = new google.maps.LatLng(locs[i][0], locs[i][1]);
+        var x = JSON.parse(locs[i]);
+        var Latlng_1 = new google.maps.LatLng(x[0], x[1]);
         var marker_1 = new google.maps.Marker({
           position: Latlng_1,
           title: "1"
