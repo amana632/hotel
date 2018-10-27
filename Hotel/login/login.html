@@ -371,12 +371,12 @@
                                 o1 = JSON.parse(this.responseText);
                                 console.log(o1);
                                 if (o1.a == "True") {
-                                    alert("Sab hogaya"); window.location.href = "./../../themeuth/themes/pleasure/app/admin1/index.html";
+                                    alert("Sab hogaya");
+                                    window.location.href = "./../../themeuth/themes/pleasure/app/admin1/index.html";
                                     window.localStorage.setItem("user_id", `${o1.b}`)
                                 }
                                 else { alert("your credentials do not match") }
-                                // document.getElementById("r3").innerHTML = o[0].sellingPrice;
-                                // console.log(o[0].sellingPrice);
+
                             }
                             var phone = document.getElementById("phone").value;
                             var password = document.getElementById("pass").value;

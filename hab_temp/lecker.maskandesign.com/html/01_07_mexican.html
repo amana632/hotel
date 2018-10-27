@@ -1707,6 +1707,12 @@
             return false;
         }
         function xhr() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
             var user_id = window.localStorage.getItem("user_id");
             var table_id = window.localStorage.getItem("table_id");
             var hotel_id = window.localStorage.getItem("hotel_id");
