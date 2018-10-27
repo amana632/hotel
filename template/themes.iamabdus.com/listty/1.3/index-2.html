@@ -6,17 +6,19 @@
 
 
 <link rel="stylesheet" href="../../../map.css">
+
 <head>
-	
+
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Landing page I-table</title>
+  <title>Landing page I-table</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- PLUGINS CSS STYLE -->
-	<link href="../../../map1.css" rel="stylesheet"><!--MAP CSS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+  <!-- PLUGINS CSS STYLE -->
+  <link href="../../../map1.css" rel="stylesheet">
+  <!--MAP CSS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
   <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
   <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -25,7 +27,7 @@
   <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet">
   <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
   <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-  <link href="plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+  <link href="plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet" />
   <link href="plugins/isotope/isotope.min.css" rel="stylesheet">
   <link href="plugins/map/css/map.css" rel="stylesheet">
   <link href="plugins/rateyo/jquery.rateyo.min.css" rel="stylesheet">
@@ -43,129 +45,133 @@
   <link rel="stylesheet" href="css/default.css" id="option_color">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- FAVICON -->
   <link href="img/favicon.png" rel="shortcut icon">
 
-<style>
-  html,
-  body {
+  <style>
+    html,
+    body {
       height: 100%;
       margin: 0;
       padding: 0;
-  }
-</style>
+    }
+  </style>
 </head>
 
-<body  onload="initMap()" id="body"  data-spy="scroll" data-target=".navbar" class="body-wrapper boxed-menu" >
+<body onload="initMap()" id="body" data-spy="scroll" data-target=".navbar" class="body-wrapper boxed-menu">
   <!--  class="body-wrapper boxed-menu"  -->
   <!-- <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div> -->
   <!-- Preloader -->
-  
+
   <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
     </header>
-<!-- BANNER SECTION -->
-<section  style="padding:0px;margin:0;padding-left: 0;" >
-  <!--style="background-image: url(img/banner/banner1.jpg);"-->
-	  <div class="ts-page-wrapper" id="page-top">
- 
-    <header id="ts-hero" class="d-block py-5 ts-separate-bg-element" data-bg-blend-mode="multiply" data-bg-parallax="scroll"
-        data-bg-parallax-speed="3" data-bg-particles-line-color="rgba(255,255,255,.6)" data-bg-particles-dot-color="rgba(255,255,255,.1)"
-        data-bg-particles-parallax="1"style="padding:0;">
+    <!-- BANNER SECTION -->
+    <section style="padding:0px;margin:0;padding-left: 0;">
+      <!--style="background-image: url(img/banner/banner1.jpg);"-->
+      <div class="ts-page-wrapper" id="page-top">
+
+        <header id="ts-hero" class="d-block py-5 ts-separate-bg-element" data-bg-blend-mode="multiply" data-bg-parallax="scroll"
+          data-bg-parallax-speed="3" data-bg-particles-line-color="rgba(255,255,255,.6)" data-bg-particles-dot-color="rgba(255,255,255,.1)"
+          data-bg-particles-parallax="1" style="padding:0;">
 
 
-        <!--HERO CONTENT ****************************************************************************************-->
- <div class="container align-self-center py-5">
-    <div class="align-items-center text-center py-3">
-        <h1>I-table</h1>
-         <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="banerInfo">
-                  <!-- <h1>The hotel finder</h1>
+          <!--HERO CONTENT ****************************************************************************************-->
+          <div class="container align-self-center py-5">
+            <div class="align-items-center text-center py-3">
+              <h1>I-table</h1>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="banerInfo">
+                      <!-- <h1>The hotel finder</h1>
                   <p>Explore. Discover. Share</p> -->
-                  <form class="form-inline" action="http://themes.iamabdus.com/listty/1.3/listing-sidebar-map-left.html" method="">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">Find</div>
-                        <input type="text" class="form-control" id="findItem" placeholder="What are you looking for?">
-                        <div class="input-group-addon addon-right"></div>
-                      </div>
+                      <form class="form-inline" action="#" method="">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon">Find</div>
+                            <input type="text" class="form-control" id="findItem" placeholder="What are you looking for?">
+                            <div class="input-group-addon addon-right"></div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon">Near</div>
+                            <input type="text" class="form-control" id="nearLocation" placeholder="Location">
+                            <div class="input-group-addon addon-right">
+                              <i class="icon-listy icon-target" aria-hidden="true"></i>
+                            </div>
+
+
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                      </form>
                     </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">Near</div>
-                        <input type="text" class="form-control" id="nearLocation" placeholder="Location">
-                        <div class="input-group-addon addon-right"><i class="icon-listy icon-target" aria-hidden="true"></i></div>
-                      
-                      
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
+
+
+
+
+
+
+            <div class="text-center py-5">
+              <a href="../../../../Hotel/login/login.html" class="btn btn-primary btn-lg m-2 ts-width__200px">Login</a>
+              <a href="../../../../Hotel/login/login.html" class="btn btn-light btn-lg m-2 ts-width__200px ts-scroll">sign-up</a>
+            </div>
           </div>
-    </div>
-
-
-
-
-
-
-        <div class="text-center py-5">
-            <a href="https://themeforest.net/item/appstorm-app-startup-template/21615554?ref=ThemeStarz" class="btn btn-primary btn-lg m-2 ts-width__200px">Login</a>
-            <a href="#demos" class="btn btn-light btn-lg m-2 ts-width__200px ts-scroll">sign-up</a>
-        </div>
-    </div>
-    <!--end row-->
-</div>
-<!--end container-->
-<!--END HERO CONTENT ************************************************************************************-->
-<!--  
+          <!--end row-->
+      </div>
+      <!--end container-->
+      <!--END HERO CONTENT ************************************************************************************-->
+      <!--  
         <div class="text-center p-5">
            <a href="index.html">
                 <img src="assets/img/logo-w.png" alt="">
             </a> -->
-            <!-- </div> -->
-
-            
-           
-       
-
-        <div class="ts-background" data-bg-image-opacity=".6">
-            <div class="ts-svg ts-z-index__2" style="z-index: 0">
-                <img src="assets/svg/wave-static-02.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
-                <img src="assets/svg/wave-static-01.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
-            </div>
-     <div class="ts-background-image ts-parallax-element" data-bg-color="#d24354" data-bg-image="assets/img/bg-girl-01.jpg" data-bg-blend-mode="multiply"></div>
-                </div>
-                
-
-            </header>      
-            <!--end #content-->
-    </div>
-</section>
-
-<!--Map section begins here-->
+      <!-- </div> -->
 
 
 
-<!--The following commented section consists of searchboxes++++++++++++++++++++++++++++++++++-->
+
+
+      <div class="ts-background" data-bg-image-opacity=".6">
+        <div class="ts-svg ts-z-index__2" style="z-index: 0">
+          <img src="assets/svg/wave-static-02.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
+          <img src="assets/svg/wave-static-01.svg" class="w-100 position-absolute ts-bottom__0 ts-height__100px">
+        </div>
+        <div class="ts-background-image ts-parallax-element" data-bg-color="#d24354" data-bg-image="assets/img/bg-girl-01.jpg" data-bg-blend-mode="multiply"></div>
+      </div>
+
+
+      </header>
+      <!--end #content-->
+  </div>
+  </section>
+
+  <!--Map section begins here-->
+
+
+
+  <!--The following commented section consists of searchboxes++++++++++++++++++++++++++++++++++-->
   <!-- <div class="clearfix homeBanner" id="findhotels">
 		Find hotels in:
 	</div> -->
 
-	<!-- <div id="locationField">
+  <!-- <div id="locationField">
 		<input id="autocomplete" placeholder="Enter a city" type="text" />
 	</div> -->
 
-	<!-- <div id="controls">
+  <!-- <div id="controls">
 		<select id="country">
 			<option value="all" selected>All</option>
 			<option value="au">Australia</option>
@@ -187,67 +193,73 @@
 
   <div id="map" style="width:100%;height:40%;"></div>
 
-  
- 
-	<!-- <div "clearfix homeBanner" id="listing">
+
+
+  <!-- <div "clearfix homeBanner" id="listing">
 		<table id="resultsTable">
 			<tbody id="results"></tbody>
 		</table>
 	</div> -->
 
-	<div "clearfix homeBanner" style="display: none">
-		<div id="info-content">
-			<table>
-				<tr id="iw-url-row" class="iw_table_row">
-					<td id="iw-icon" class="iw_table_icon"></td>
-					<td id="iw-url"></td>
-				</tr>
-				<tr id="iw-address-row" class="iw_table_row">
-					<td class="iw_attribute_name">Address:</td>
-					<td id="iw-address"></td>
-				</tr>
-				<tr id="iw-phone-row" class="iw_table_row">
-					<td class="iw_attribute_name">Telephone:</td>
-					<td id="iw-phone"></td>
-				</tr>
-				<tr id="iw-rating-row" class="iw_table_row">
-					<td class="iw_attribute_name">Rating:</td>
-					<td id="iw-rating"></td>
-				</tr>
-				<tr id="iw-website-row" class="iw_table_row">
-					<td class="iw_attribute_name">Website:</td>
-					<td id="iw-website"></td>
-				</tr>
-			</table>
-		</div>
+  <div "clearfix homeBanner" style="display: none">
+    <div id="info-content">
+      <table>
+        <tr id="iw-url-row" class="iw_table_row">
+          <td id="iw-icon" class="iw_table_icon"></td>
+          <td id="iw-url"></td>
+        </tr>
+        <tr id="iw-address-row" class="iw_table_row">
+          <td class="iw_attribute_name">Address:</td>
+          <td id="iw-address"></td>
+        </tr>
+        <tr id="iw-phone-row" class="iw_table_row">
+          <td class="iw_attribute_name">Telephone:</td>
+          <td id="iw-phone"></td>
+        </tr>
+        <tr id="iw-rating-row" class="iw_table_row">
+          <td class="iw_attribute_name">Rating:</td>
+          <td id="iw-rating"></td>
+        </tr>
+        <tr id="iw-website-row" class="iw_table_row">
+          <td class="iw_attribute_name">Website:</td>
+          <td id="iw-website"></td>
+        </tr>
+      </table>
+    </div>
   </div>
 
-    <!-- FOOTER -->
-    <footer style="background-image: url(img/background/bg-footer.jpg);">
-      <!-- FOOTER INFO -->
-      <div class="clearfix footerInfo" style="padding-bottom:0px;height:5%;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <div class="footerText">
-                <!-- <a href="index.html" class="footerLogo">
+  <!-- FOOTER -->
+  <footer style="background-image: url(img/background/bg-footer.jpg);">
+    <!-- FOOTER INFO -->
+    <div class="clearfix footerInfo" style="padding-bottom:0px;height:5%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-xs-12">
+            <div class="footerText">
+              <!-- <a href="index.html" class="footerLogo">
                   <svg class="logo-svg white" version="1" xmlns="http://www.w3.org/2000/svg" width="140" height="44">
                     <path class="path-1" fill="" d="M0 44V0h139.813v44H0zM137.346 2.467H2.467v39.065h134.879V2.467z"/>
                     <path class="path-1" fill="" d="M120.927 22.389v11.095h-4.566V22.389a371.288 371.288 0 0 0-2.086-2.888 347.047 347.047 0 0 1-2.2-3.053 386.86 386.86 0 0 0-2.201-3.053c-.7-.959-1.395-1.922-2.086-2.888h5.617l5.255 7.287 5.222-7.287h5.649c.002 0-8.604 11.882-8.604 11.882zM98.034 33.484h-4.565V15.069h-6.372v-4.562h17.244v4.562h-6.306v18.415zm-21.908 0H71.56V15.069h-6.372v-4.562h17.244v4.562h-6.306v18.415zm-17.425-1.789c-.69.623-1.511 1.116-2.463 1.477-.953.361-1.987.542-3.104.542-1.007 0-1.982-.143-2.923-.427a10.814 10.814 0 0 1-2.661-1.214h.033a9.928 9.928 0 0 1-1.577-1.215 18.73 18.73 0 0 1-.953-.952l3.416-3.151c.153.197.399.432.739.706.339.274.728.537 1.166.788.44.253.902.467 1.38.64.481.175.941.262 1.379.262.372 0 .744-.044 1.117-.131.359-.082.703-.22 1.018-.41.305-.185.564-.437.755-.739.197-.306.296-.689.296-1.149 0-.175-.06-.366-.181-.574-.12-.208-.329-.432-.624-.673-.296-.241-.706-.498-1.232-.771a20.567 20.567 0 0 0-1.971-.87 25.42 25.42 0 0 1-2.562-1.132 8.896 8.896 0 0 1-2.053-1.428 5.903 5.903 0 0 1-1.347-1.871c-.317-.7-.476-1.51-.476-2.429 0-.94.175-1.822.526-2.642a6.21 6.21 0 0 1 1.494-2.133c.646-.602 1.423-1.072 2.332-1.412.908-.339 1.911-.509 3.006-.509.591 0 1.22.077 1.889.23.668.153 1.319.35 1.954.591a12.95 12.95 0 0 1 1.79.837c.558.317 1.023.64 1.396.968l-2.825 3.545a15.71 15.71 0 0 0-1.281-.788 10.316 10.316 0 0 0-1.281-.558 4.311 4.311 0 0 0-1.478-.263c-.919 0-1.637.181-2.151.542-.515.361-.772.881-.772 1.559 0 .307.093.586.279.837.186.252.438.482.756.689.348.225.717.417 1.1.574.416.176.854.34 1.314.492 1.314.504 2.42 1.013 3.318 1.526.898.514 1.62 1.062 2.168 1.642s.936 1.204 1.166 1.871c.23.668.345 1.395.345 2.183 0 .963-.197 1.871-.591 2.724a6.803 6.803 0 0 1-1.626 2.216zM34.839 10.507h4.532v22.977h-4.532V10.507zm-20.036 0h4.566v18.415h9.263v4.563H14.803V10.507z"/>
                   </svg>
                 </a> -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-                <ul class="list-styled list-contact">
-                  <li><i class="fa fa-phone" aria-hidden="true"></i>XXXXX-XXXXX</li>
-                  <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">abcd@gmail.com</a></li>
-                </ul>
-              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor</p>
+              <ul class="list-styled list-contact">
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>XXXXX-XXXXX</li>
+                <li>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="#">abcd@gmail.com</a>
+                </li>
+              </ul>
             </div>
-            <!-- <div class="col-sm-3 col-xs-12"> -->
-              <!-- <div class="footerInfoTitle">
+          </div>
+          <!-- <div class="col-sm-3 col-xs-12"> -->
+          <!-- <div class="footerInfoTitle">
                 <h4>Links</h4>
               </div> -->
-              <!-- <div class="useLink">
+          <!-- <div class="useLink">
                 <ul class="list-unstyled">
                   <li><a href="dashboard.html">Dashboard</a></li>
                   <li><a href="sign-up.html">Create Account</a></li>
@@ -256,27 +268,35 @@
                   <li><a href="edit-listings.html">Edit Listing</a></li>
                 </ul>
               </div> -->
-            <!-- </div> -->
-            <div class="col-sm-3 col-xs-12">
-              <div class="footerInfoTitle">
-                <h4>Useful Links</h4>
-              </div>
-              <div class="useLink">
-                <ul class="list-unstyled">
-                  <li><a href="contact-us.html">Contact Us</a></li>
-                  <li><a href="terms-of-services.html">Terms and Conditions</a></li>
-                  <!-- <li><a href="how-it-works.html">How It Works</a></li> -->
-                  <li><a href="payment-process.html">Payment</a></li>
-                  <li><a href="pricing-table.html">Pricing</a></li>
-                </ul>
-              </div>
+          <!-- </div> -->
+          <div class="col-sm-3 col-xs-12">
+            <div class="footerInfoTitle">
+              <h4>Useful Links</h4>
+            </div>
+            <div class="useLink">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="contact-us.html">Contact Us</a>
+                </li>
+                <li>
+                  <a href="terms-of-services.html">Terms and Conditions</a>
+                </li>
+                <!-- <li><a href="how-it-works.html">How It Works</a></li> -->
+                <li>
+                  <a href="payment-process.html">Payment</a>
+                </li>
+                <li>
+                  <a href="pricing-table.html">Pricing</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- COPY RIGHT -->
-      <!-- <div class="clearfix copyRight">
+    <!-- COPY RIGHT -->
+    <!-- <div class="clearfix copyRight">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
@@ -302,7 +322,7 @@
           </div>
         </div>
       </div> -->
-    </footer>
+  </footer>
   </div>
 
   <!-- LOGIN  MODAL -->
@@ -329,14 +349,17 @@
               <button type="submit" class="btn btn-primary btn-block">Log In</button>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox"> Remember me</label>
+              <label>
+                <input type="checkbox"> Remember me</label>
               <a href="#" class="pull-right link">Fogot Password?</a>
             </div>
 
           </form>
         </div>
         <div class="modal-footer">
-          <p>Don’t have an Account? <a href="#" class="link">Sign up</a></p>
+          <p>Don’t have an Account?
+            <a href="#" class="link">Sign up</a>
+          </p>
         </div>
       </div>
     </div>
@@ -344,50 +367,49 @@
 
   <!-- JAVASCRIPTS -->
 
-              <script>
-            var o;
-                    function reqListener () {
-                        o=JSON.parse(this.responseText);
-                            console.log(o);
+  <script>
+    var o;
+    function reqListener() {
+      o = JSON.parse(this.responseText);
+      console.log(o);
 
-                    }
+    }
 
-            var oReq = new XMLHttpRequest();
-            oReq.addEventListener("load", reqListener);
-            oReq.open("GET", "http://127.0.0.1:8080/hotels");
-            oReq.send();
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", "http://127.0.0.1:8080/hotels");
+    oReq.send();
 
-              var arr=[];
-               for(var i=0;i<locs.length;i++)
-               {       arr=arr.concat(temp2.a[i].hotel_lat);
-                       arr=arr.concat(temp2.a[i].hotel_lang);
-               }
+    var arr = [];
+    for (var i = 0; i < locs.length; i++) {
+      arr = arr.concat(temp2.a[i].hotel_lat);
+      arr = arr.concat(temp2.a[i].hotel_lang);
+    }
 
 
     // this map is now working
 
     // Initialize and add the map
     function initMap() {
- 
-    // The location of Uluru
-    var uluru = {lat: -25.344, lng: 131.036};
-    // The map, centered at Uluru
-    var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: uluru});
-        var locs = [["41.065294480291","-85.330151019708"],["42.065294480291","-85.330151019708"],["43.065294480291","-85.330151019708"],["44.065294480291","-85.330151019708"]];
-               for(var i=0;i<locs.length;i++)
-             {
-                      var Latlng_1 = new google.maps.LatLng(locs[i][0],locs[i][1]);
-                      var marker_1 = new google.maps.Marker({
-                      position: Latlng_1,
-                      title:"1"});
-                      marker_1.setMap(map);
-              }
+
+      // The location of Uluru
+      var uluru = { lat: -25.344, lng: 131.036 };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 4, center: uluru });
+      var locs = [["41.065294480291", "-85.330151019708"], ["42.065294480291", "-85.330151019708"], ["43.065294480291", "-85.330151019708"], ["44.065294480291", "-85.330151019708"]];
+      for (var i = 0; i < locs.length; i++) {
+        var Latlng_1 = new google.maps.LatLng(locs[i][0], locs[i][1]);
+        var marker_1 = new google.maps.Marker({
+          position: Latlng_1,
+          title: "1"
+        });
+        marker_1.setMap(map);
+      }
     }
-      </script>
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&callback=initMap">
-      </script>
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&callback=initMap">
+  </script>
 
 
 
@@ -408,7 +430,8 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&center=-33.87142836089382,151.09137979604134&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xebe3cd&style=element:labels.text.fill%7Ccolor:0x523735&style=element:labels.text.stroke%7Ccolor:0xf5f1e6&style=feature:administrative%7Celement:geometry.stroke%7Ccolor:0xc9b2a6&style=feature:administrative.land_parcel%7Celement:geometry.stroke%7Ccolor:0xdcd2be&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xae9e90&style=feature:landscape.natural%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:poi%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x93817c&style=feature:poi.park%7Celement:geometry.fill%7Ccolor:0xa5b076&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x447530&style=feature:road%7Celement:geometry%7Ccolor:0xf5f1e6&style=feature:road.arterial%7Celement:geometry%7Ccolor:0xfdfcf8&style=feature:road.highway%7Celement:geometry%7Ccolor:0xf8c967&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xe9bc62&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0xe98d58&style=feature:road.highway.controlled_access%7Celement:geometry.stroke%7Ccolor:0xdb8555&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x806b63&style=feature:transit.line%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:transit.line%7Celement:labels.text.fill%7Ccolor:0x8f7d77&style=feature:transit.line%7Celement:labels.text.stroke%7Ccolor:0xebe3cd&style=feature:transit.station%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:water%7Celement:geometry.fill%7Ccolor:0xb9d3c2&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x92998d&size=480x360"
         async defer></script> -->
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg"></script> -->
-  <script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&center=-33.87410809042495,151.10593695850002&zoom=12&format=png&maptype=roadmap&size=480x360" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCrrcBw47KioVdr2nqVaTAv10mFiCzQVLg&center=-33.87410809042495,151.10593695850002&zoom=12&format=png&maptype=roadmap&size=480x360"
+    async defer></script>
   <script src="plugins/map/js/rich-marker.js"></script>
   <script src="plugins/map/js/infobox_packed.js"></script>
   <script src="js/single-map.js"></script>
@@ -432,9 +455,9 @@
   <script src="assets/js/custom.js"></script>
 
 
-  
-<!--MAP SCRIPT -->	
-	<!-- <script>
+
+  <!--MAP SCRIPT -->
+  <!-- <script>
       // This example uses the autocomplete feature of the Google Places API.
       // It allows the user to find all hotels in a given place, within a given
       // country. It then displays markers for all the hotels returned,
@@ -712,10 +735,10 @@
         }
       }
     </script> -->
-    
-        
-       
-<link href="options/optionswitch.css" rel="stylesheet">
+
+
+
+  <link href="options/optionswitch.css" rel="stylesheet">
 
 
   <!--PLOT MULTIPLE LOCATIONS***********************************************-->
@@ -743,8 +766,8 @@
    }
     
     </script> -->
-<!--*************************************************************************************************************-->
-<!-- <script src="options/optionswitcher.js"></script> -->
+  <!--*************************************************************************************************************-->
+  <!-- <script src="options/optionswitcher.js"></script> -->
 </body>
-</html>
 
+</html>
