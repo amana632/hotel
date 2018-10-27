@@ -85,7 +85,7 @@
 
 			var oReq1 = new XMLHttpRequest();
 			oReq1.addEventListener("load", reqListener1);
-			oReq1.open("GET", `http://3.16.56.169:8080/hotels/${o.a}`);
+			oReq1.open("GET", `http://3.16.56.169:80/hotels/${o.a}`);
 			oReq1.send();
 			console.log("7");
 
@@ -95,7 +95,7 @@
 		console.log("3");
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", reqListener);
-		oReq.open("GET", `http://3.16.56.169:8080/hotelid/${user_id}`);
+		oReq.open("GET", `http://3.16.56.169:80/hotelid/${user_id}`);
 		oReq.send();
 		console.log("4");
 
@@ -1735,14 +1735,14 @@
 		
 					var oReq1 = new XMLHttpRequest();
 					oReq1.addEventListener("load", reqListener1);
-					oReq1.open("GET", `http://3.16.56.169:8080/hotels/${o.a}`);
+					oReq1.open("GET", `http://3.16.56.169:80/hotels/${o.a}`);
 					oReq1.send();
 		
 				}
 				// @nd Ends
 				var oReq = new XMLHttpRequest();
 				oReq.addEventListener("load", reqListener);
-				oReq.open("GET", `http://3.16.56.169:8080/hotelid/${user_id}`);
+				oReq.open("GET", `http://3.16.56.169:80/hotelid/${user_id}`);
 				oReq.send();
 			</script> -->
 	</div>

@@ -268,7 +268,7 @@
                                             <input type="number" name="quantity" id="quantity_1" quired>
 
                                             <input type="number" hidden name="user_id" id="user_id_1" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_1" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -285,6 +285,8 @@
                             <script>
                                 function add() {
                                     var user_id = window.localStorage.getItem("user_id");
+                                    var waiter_id = window.localStorage.getItem("waiter_id");
+
                                     document.getElementById("user_id_1").value = user_id;
                                     document.getElementById("user_id_2").value = user_id;
                                     document.getElementById("user_id_3").value = user_id;
@@ -294,6 +296,17 @@
                                     document.getElementById("user_id_7").value = user_id;
                                     document.getElementById("user_id_8").value = user_id;
                                     document.getElementById("user_id_9").value = user_id;
+
+
+                                    document.getElementById("waiter_id_1").value = waiter_id;
+                                    document.getElementById("waiter_id_2").value = waiter_id;
+                                    document.getElementById("waiter_id_3").value = waiter_id;
+                                    document.getElementById("waiter_id_4").value = waiter_id;
+                                    document.getElementById("waiter_id_5").value = waiter_id;
+                                    document.getElementById("waiter_id_6").value = waiter_id;
+                                    document.getElementById("waiter_id_7").value = waiter_id;
+                                    document.getElementById("waiter_id_8").value = waiter_id;
+                                    document.getElementById("waiter_id_9").value = waiter_id;
 
                                     // console.log(x);
                                     // // YAHA par data kaise jaega
@@ -346,7 +359,7 @@
                                             <input type="number" name="quantity" id="quantity_2" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_2" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_2" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -391,7 +404,7 @@
                                             <input type="number" name="quantity" id="quantity_3" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_3" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_3" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -436,7 +449,7 @@
                                             <input type="number" name="quantity" id="quantity_4" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_4" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_4" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -481,7 +494,7 @@
                                             <input type="number" name="quantity" id="quantity_5" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_5" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_5" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -526,6 +539,7 @@
                                             <input type="number" name="quantity" id="quantity_6" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_6" required>
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_6" required>
 
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
@@ -570,7 +584,7 @@
                                             <input type="number" name="quantity" id="quantity_7" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_7" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_7" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -614,7 +628,7 @@
                                             <input type="number" name="quantity" id="quantity_8" required>
 
                                             <input type="number" hidden name="user_id" id="user_id_8" required>
-
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_8" required>
                                             <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
@@ -751,32 +765,32 @@
                                                 oReq.open("GET", `http://3.16.56.169:8080/order${user_id}`);
                                                 oReq.send();
 
-                                                var myBooks = [
-                                                    {
-                                                        "Order ID": "1",
-                                                        "Name": "Computer Architecture",
-                                                        "Category": "Computers",
-                                                        "Price": "125.60"
-                                                    },
-                                                    {
-                                                        "Order ID": "2",
-                                                        "Name": "Asp.Net 4 Blue Book",
-                                                        "Category": "Programming",
-                                                        "Price": "56.00"
-                                                    },
-                                                    {
-                                                        "Order ID": "3",
-                                                        "Name": "Popular Science",
-                                                        "Category": "Science",
-                                                        "Price": "210.40"
-                                                    }
-                                                ]
+                                                // var myBooks = [
+                                                //     {
+                                                //         "Order ID": "1",
+                                                //         "Name": "Computer Architecture",
+                                                //         "Category": "Computers",
+                                                //         "Price": "125.60"
+                                                //     },
+                                                //     {
+                                                //         "Order ID": "2",
+                                                //         "Name": "Asp.Net 4 Blue Book",
+                                                //         "Category": "Programming",
+                                                //         "Price": "56.00"
+                                                //     },
+                                                //     {
+                                                //         "Order ID": "3",
+                                                //         "Name": "Popular Science",
+                                                //         "Category": "Science",
+                                                //         "Price": "210.40"
+                                                //     }
+                                                // ]
 
                                                 // EXTRACT VALUE FOR HTML HEADER. 
                                                 // ('Book ID', 'Book Name', 'Category' and 'Price')
                                                 var col = [];
-                                                for (var i = 0; i < myBooks.length; i++) {
-                                                    for (var key in myBooks[i]) {
+                                                for (var i = 0; i < o.a.length; i++) {
+                                                    for (var key in o.a[i]) {
                                                         if (col.indexOf(key) === -1) {
                                                             col.push(key);
                                                         }
@@ -797,7 +811,7 @@
                                                 }
 
                                                 // ADD JSON DATA TO THE TABLE AS ROWS.
-                                                for (var i = 0; i < myBooks.length; i++) {
+                                                for (var i = 0; i < o.a.length; i++) {
 
                                                     tr = table.insertRow(-1);
 

@@ -1676,10 +1676,14 @@
             function reqListener() {
                 o = JSON.parse(this.responseText);
                 console.log(o);
-                documecnt.getElementById("user_id").innerText = user_id;
-                documecnt.getElementById("hotel_id").innerText = hotel_id;
-                documecnt.getElementById("table_id").innerText = table_id;
-                documecnt.getElementById("waiter_id").innerText = o.a.waiter_id;
+                for (var i = 0; i < o.a.length; i++) {
+                    if (o.a[i].status == 1)
+                        document.getElementById("waiter_id").innerText = o.a[i].waiter_id;
+                }
+                document.getElementById("user_id").innerText = user_id;
+                document.getElementById("hotel_id").innerText = hotel_id;
+                document.getElementById("table_id").innerText = table_id;
+                window.localStorage.setItem("waiter_id", waiter_id);
             }
 
             var oReq = new XMLHttpRequest();

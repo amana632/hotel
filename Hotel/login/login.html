@@ -337,7 +337,7 @@
                     <span>User Type</span>
                     <select id="type" class="form-control" name="user_type">
                         <option>
-                            Merchant
+                            Hotel
                         </option>
                         <option>
                             Waiter
@@ -371,8 +371,19 @@
                                 o1 = JSON.parse(this.responseText);
                                 console.log(o1);
                                 if (o1.a == "True") {
-                                    alert("Sab hogaya");
-                                    window.location.href = "./../../themeuth/themes/pleasure/app/admin1/index.html";
+                                    alert("Successfully Logged In");
+                                    if (document.getElementById("type").value == "Hotel") {
+                                        window.location.href = "./../../themeuth/themes/pleasure/app/admin1/index.html";
+                                    } else if (document.getElementById("type").value == "Waiter") {
+                                        window.location.href = "./../../themeuth/themes/pleasure/app/admin1/waiter_dash.html";
+                                    }
+                                    else if (document.getElementById("type").value == "Customer") {
+                                        window.location.href = "./../../hab_temp/lecker.maskandesign.com/html/01_07_mexican.html";
+                                    }
+                                    else {
+                                        window.location.href = "./../../themeuth/themes/pleasure/app/admin1/chef_dash.html";
+                                    }
+
                                     window.localStorage.setItem("user_id", `${o1.b}`)
                                 }
                                 else { alert("your credentials do not match") }
@@ -381,7 +392,7 @@
                             var phone = document.getElementById("phone").value;
                             var password = document.getElementById("pass").value;
                             var user_type = document.getElementById("type").value;
-                            var url = "http://3.16.56.169:8080/isValidUser";
+                            var url = "http://3.16.56.169:80/isValidUser";
                             var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                             var oReq = new XMLHttpRequest();
                             oReq.addEventListener("load", reqListener1);
@@ -399,7 +410,7 @@
                     var phone1 = document.getElementById("phone").value;
                     // var password = document.getElementById("pass").value;
                     // var user_type = document.getElementById("type").value;
-                    var url1 = `http://3.16.56.169:8080/isRegisteredUser/${phone1}`;
+                    var url1 = `http://3.16.56.169:80/isRegisteredUser/${phone1}`;
                     // var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                     var oReq1 = new XMLHttpRequest();
                     oReq1.addEventListener("load", reqListener);
@@ -435,7 +446,7 @@
                     <input type="submit" value="Submit">
                   </form> -->
 
-                <form action="http://3.16.56.169:8080/user" method="POST">
+                <form action="http://3.16.56.169:80/user" method="POST">
                     <label>
                         <span>User Name:</span>
                         <input type="text" name="username" value="">
@@ -462,7 +473,7 @@
                         <select id="inputState" class="form-control" name="user_type">
                             <!-- <option selected>Type</option> -->
                             <option>
-                                Merchant
+                                Hotel
                             </option>
                             <option>
                                 Waiter
@@ -475,16 +486,18 @@
                             </option>
                         </select>
                     </label>
-                    <!-- <label>
-                        
-                    </label> -->
+                    <input type="hidden" name="redirect" value="http://www.google.com">
                     <input type="submit" value="Submit" class="submit">
 
-                    <!-- <button type="button" value="Submit" class="submit">Sign Up</button>
-                    <button type="button" class="fb-btn">Join with
-                        <span>facebook</span>
-                    </button> -->
+
                 </form>
+                <script>
+                    function func() {
+                        alert("Succesffuly Registered !! Please Login To Continue...");
+
+                    }
+
+                </script>
 
                 <!-- <label>
                     <span>Name</span>
@@ -510,7 +523,7 @@
                             aria-expanded="false">
                             User Type </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Mercant</a>
+                            <a class="dropdown-item" href="#">Hotel</a>
                             <a class="dropdown-item" href="#">Waiter</a>
                             <a class="dropdown-item" href="#">Customer</a>
                         </div>
@@ -524,56 +537,7 @@
         </div>
     </div>
 
-    <!-- <a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
-        <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
-    </a>
-    <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
-        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
-    </a> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-
-
-        // $(document).ready(function () {
-        //     $('#submamanit').click(function () {
-        //         console.log("click");
-        //         var sendData11 = $('#password').val();
-        //         var sendData21 = $('#phone').val();
-        //         var sendData31 = $('#user_type').val();
-
-        //         $.ajax({
-        //             headers: {
-        //                 'Access-Control-Allow-Origin': '*',
-        //                 'Access-Control-Allow-Methods': 'POST',
-        //                 'Access-Control-Allow-Headers': 'Content-Type'
-        //             },
-        //             url: 'http://3.16.56.169:8080/isValidUser',
-        //             //Your api url
-        //             type: 'GET',   //type is any HTTP method
-        //             contentType: "application/form",
-
-        //             data: {
-        //                 password: sendData11,
-        //                 phone: sendData21,
-        //                 user_type: sendData31,
-        //             },      //Data as js object
-        //             dataType: "formData",
-
-        //             success: function (data, textStatus, jqXHR) {
-        //                 console.log(data);
-        //                 console.log("56789");
-        //                 alert("Result: " + data.result + ", Message: " + data.message);
-        //             }
-        //         });
-        //     });
-        // });
-    </script>
-
-
-
-
-
-
 
     <script>
         document.querySelector('.img__btn').addEventListener('click', function () {
