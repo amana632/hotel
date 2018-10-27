@@ -1,0 +1,201 @@
+
+
+div.style-customizer {
+    background-color: #fff;
+    color: #262626;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    z-index: 9999999999;
+    left: -300px;
+    box-shadow: -3px 0 50px -2px rgba(0, 0, 0, 0.14);
+    height: 100%;
+    bottom: 0;
+}
+.style-customizer.closed {
+    box-shadow: none;
+}
+div.style-customizer .buy-button {
+    text-align: center;
+    display: inline-block;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    padding-bottom: 10px;
+}
+div.style-customizer .content-chooser {
+    padding: 182px 22px 30px 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    border-top: none;
+}
+div.style-customizer.opened .content-chooser {
+    opacity: 1;
+}
+.content-chooser p {
+    margin-bottom: 10px;
+}
+div.style-customizer h2 {
+    margin: 0;
+    font-size: 18px;
+}
+div.style-customizer h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 15px;
+    color: #000;
+}
+div.style-customizer a.opener {
+    display: block;
+    height: 45px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    background: #fff;
+    width: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    color: #777777;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.14), -1px 0 3px 0 rgba(0, 0, 0, 0.14);
+}
+div.style-customizer.opened a.opener {
+    right: -45px;
+    border-color: transparent;
+}
+div.style-customizer ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 0;
+}
+div.style-customizer ul.layoutstyle li {
+    width: 45%;
+    height: 35px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #e54c2a;
+    border: 3px solid #e54c2a;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 18px
+}
+
+
+div.style-customizer ul.headerChange li{
+    font-size: 16px;
+    text-align: center;
+    background: #eee;
+    border: 3px solid transparent;
+    line-height: 34px;
+    height: 40px;
+}
+div.style-customizer ul li {
+    float: left;
+    width: 23%;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+div.style-customizer ul.backgroundChange li{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
+
+div.style-customizer ul li.selected {
+    border: 3px solid #555;
+}
+div.style-customizer ul.resetAll li {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    min-width: 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+}
+div.style-customizer .btn a {
+    text-decoration: none;
+    color: #ffffff;
+}
+div.style-customizer select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #b2bfca;
+}
+div.style-customizer .skin-default {
+    background: #e54c2a;
+}
+div.style-customizer .color-1 {
+    background: #e9457a;
+}
+div.style-customizer .color-2 {
+    background: #44b272 ;
+}
+div.style-customizer .color-3 {
+    background: #228B22;
+}
+div.style-customizer .color-4 {
+    background: #556B2F;
+}
+div.style-customizer .color-5 {
+    background: #008080;
+}
+div.style-customizer .color-6 {
+    background: #ff9800;
+}
+div.style-customizer .color-7 {
+    background: #e91e63;
+}
+div.style-customizer .color-8 {
+    background: #9c27b0;
+}
+div.style-customizer .color-9 {
+    background: #673ab7;
+}
+div.style-customizer .color-10 {
+    background: #3f51b5;
+}
+div.style-customizer .color-11 {
+    background: #800000;
+}
+.customizer-logo {
+    display: block;
+    margin-bottom: 10px;
+    padding: 25px 0;
+}
+
+
+
+/*Box Layout Responsive*/
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1500px) {
+
+}
+@media( max-width:992px) {
+
+}
+
