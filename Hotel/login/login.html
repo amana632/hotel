@@ -373,7 +373,7 @@
                                 if (o1.a == "True") {
                                     alert("Successfully Logged In");
                                     if (document.getElementById("type").value == "Hotel") {
-                                        window.location.href = "./../../themeuth/themes/pleasure/app/admin1/index.html";
+                                        window.location.href = "./../../themeuth/themes/pleasure/app/admin1/hotel_details.html";
                                     } else if (document.getElementById("type").value == "Waiter") {
                                         window.location.href = "./../../themeuth/themes/pleasure/app/admin1/waiter_dash.html";
                                     }
@@ -392,7 +392,7 @@
                             var phone = document.getElementById("phone").value;
                             var password = document.getElementById("pass").value;
                             var user_type = document.getElementById("type").value;
-                            var url = "http://3.16.56.169:80/isValidUser";
+                            var url = "http://127.0.0.1:8080/isValidUser";
                             var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                             var oReq = new XMLHttpRequest();
                             oReq.addEventListener("load", reqListener1);
@@ -410,7 +410,7 @@
                     var phone1 = document.getElementById("phone").value;
                     // var password = document.getElementById("pass").value;
                     // var user_type = document.getElementById("type").value;
-                    var url1 = `http://3.16.56.169:80/isRegisteredUser/${phone1}`;
+                    var url1 = `http://127.0.0.1:8080/isRegisteredUser/${phone1}`;
                     // var params = `phone=${phone}&password=${password}&user_type=${user_type}`;
                     var oReq1 = new XMLHttpRequest();
                     oReq1.addEventListener("load", reqListener);
@@ -436,17 +436,14 @@
                     <span class="m--in">Sign In</span>
                 </div>
             </div>
+
             <div class="sign-up" style="display:inline;">
                 <br>
                 <h2>Time to feel like home,</h2>
 
-                <!-- <form action="/action_page.php" method="post" target="_blank">
-                    First name: <input type="text" name="fname"><br>
-                    Last name: <input type="text" name="lname"><br>
-                    <input type="submit" value="Submit">
-                  </form> -->
 
-                <form action="http://3.16.56.169:80/user" method="POST">
+
+                <form action="http://127.0.0.1:8080/user" method="POST">
                     <label>
                         <span>User Name:</span>
                         <input type="text" name="username" value="">
@@ -486,18 +483,11 @@
                             </option>
                         </select>
                     </label>
-                    <input type="hidden" name="redirect" value="http://www.google.com">
+
                     <input type="submit" value="Submit" class="submit">
 
 
                 </form>
-                <script>
-                    function func() {
-                        alert("Succesffuly Registered !! Please Login To Continue...");
-
-                    }
-
-                </script>
 
                 <!-- <label>
                     <span>Name</span>

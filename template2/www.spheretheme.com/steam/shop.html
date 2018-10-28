@@ -250,8 +250,8 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
-                                            <input type="number" hidden name="item_id" id="item_id_1">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
+                                            <input type="number" hidden name="item_id" id="item_id_1" value=1>
                                             <h4 id="food_1_title">Food Title 1 Here</h4>
                                             <div class="rating">
                                                 <i class="icofont icofont-star"></i>
@@ -260,16 +260,19 @@
                                                 <i class="icofont icofont-star"></i>
                                                 <i class="icofont icofont-star"></i>
                                             </div>
-                                            <input type="number" hidden name="price" value="$231.00">
-                                            <div class="price">
-                                                <span id="price_1">$231.00</span>
-                                            </div>
-                                            <br> Quantity:
-                                            <input type="number" name="quantity" id="quantity_1" quired>
+                                            <input type="number" hidden name="price" value=231>
 
-                                            <input type="number" hidden name="user_id" id="user_id_1" required>
-                                            <input type="number" hidden name="waiter_id" id="waiter_id_1" required>
-                                            <button class="btn btn-primary" style="background-color: blueviolet;" onclick="add();">Add To Cart</button>
+                                            <div class="price">
+                                                <span id="price_11">$ 120.00</span>
+                                            </div>
+
+
+                                            <br> Quantity:
+                                            <input type="number" name="quantity" id="quantity_1">
+                                            <input type="number" name="booking_id" id="booking_id" hidden value=2>
+                                            <input type="number" hidden name="user_id" id="user_id_1" required value=2>
+                                            <input type="number" hidden name="waiter_id" id="waiter_id_1" required value=2>
+                                            <input type="submit" value="Submit">
 
                                             <!-- <p class="des">Cursus / Dictum / Risus</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non
@@ -308,6 +311,10 @@
                                     document.getElementById("waiter_id_8").value = waiter_id;
                                     document.getElementById("waiter_id_9").value = waiter_id;
 
+                                    alert("Item Added Successfully");
+
+
+
                                     // console.log(x);
                                     // // YAHA par data kaise jaega
                                     // var xhr = new XMLHttpRequest();
@@ -341,7 +348,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form>
                                             <input type="number" hidden name="item_id" id="item_id_2">
                                             <h4 id="food_2_title">Food Title 2 Here</h4>
                                             <div class="rating">
@@ -353,7 +360,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_2">$231.00</span>
+                                                <span id="price_2">$ 51.00</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_2" required>
@@ -386,7 +393,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_3">
                                             <h4 id="food_3_title">Food Title 3 Here</h4>
                                             <div class="rating">
@@ -398,7 +405,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_3">$231.00</span>
+                                                <span id="price_3">$ 131.00</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_3" required>
@@ -431,7 +438,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_4">
                                             <h4 id="food_4_title">Food Title 4 Here</h4>
                                             <div class="rating">
@@ -443,7 +450,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_4">$231.00</span>
+                                                <span id="price_4">$ 131.20</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_4" required>
@@ -476,7 +483,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_5">
                                             <h4 id="food_5_title">Food Title 5 Here</h4>
                                             <div class="rating">
@@ -488,7 +495,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_5">$231.00</span>
+                                                <span id="price_5">$ 210.40</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_5" required>
@@ -521,7 +528,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_6">
                                             <h4 id="food_6_title">Food Title 6 Here</h4>
                                             <div class="rating">
@@ -533,7 +540,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_6">$231.00</span>
+                                                <span id="price_6">$ 328.00</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_6" required>
@@ -566,7 +573,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_7">
                                             <h4 id="food_7_title">Food Title 7 Here</h4>
                                             <div class="rating">
@@ -578,7 +585,7 @@
                                             </div>
                                             <input type="number" hidden name="price" id="price_7" value="$231.00">
                                             <div class="price">
-                                                <span id="price_7">$231.00</span>
+                                                <span id="price_7">$ 231.00</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_7" required>
@@ -610,7 +617,7 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
+                                        <form action="http://127.0.0.1:8080/orderkaro" , method="POST">
                                             <input type="number" hidden name="item_id" id="item_id_8">
                                             <h4 id="food_8_title">Food Title 8 Here</h4>
                                             <div class="rating">
@@ -622,7 +629,7 @@
                                             </div>
                                             <input type="number" hidden name="price" value="$231.00">
                                             <div class="price">
-                                                <span id="price_8">$231.00</span>
+                                                <span id="price_8">$ 232.30</span>
                                             </div>
                                             <br> Quantity:
                                             <input type="number" name="quantity" id="quantity_8" required>
@@ -654,11 +661,12 @@
                                         </div> -->
                                     </div>
                                     <div class="caption">
-                                        <form action="http://3.16.56.169:8080/orderkaro" , method="POST">
-                                            <input type="number" hidden name="item_id" id="item_id_9">
+                                        <form action="http://127.0.0.1:8080/orderkaro" method="POST">
+                                            <input type="number" hidden name="item_id" id="item_id_9" value=9>
                                             <div class="price">
-                                                <span id="price_9">$231.00</span>
+                                                <span id="price_9">$ 111.40</span>
                                             </div>
+
                                             <div class="rating">
                                                 <i class="icofont icofont-star"></i>
                                                 <i class="icofont icofont-star"></i>
@@ -747,7 +755,7 @@
                                                         document.getElementById("demo").innerHTML = this.responseText;
                                                     }
                                                 };
-                                                xhttp.open("POST", "https://3.16.56.169:8080/transaction", true);
+                                                xhttp.open("POST", "https://127.0.0.1:8080/transaction", true);
                                                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                                                 xhttp.send(`table_id=${table_id}&user_id=${user_id}&hotel_id=${hotel_id}&cost=${cost}&waiter_id=${waiter_id}&order_id=${order_id}&date_time=${date_time}&booking_id=${booking_id}`);
                                             }
@@ -762,29 +770,78 @@
                                                 var user_id = window.localStorage.getItem("user_id");
                                                 var oReq = new XMLHttpRequest();
                                                 oReq.addEventListener("load", reqListener);
-                                                oReq.open("GET", `http://3.16.56.169:8080/order${user_id}`);
+                                                oReq.open("GET", `http://127.0.0.1:8080/order${user_id}`);
                                                 oReq.send();
 
-                                                // var myBooks = [
-                                                //     {
-                                                //         "Order ID": "1",
-                                                //         "Name": "Computer Architecture",
-                                                //         "Category": "Computers",
-                                                //         "Price": "125.60"
-                                                //     },
-                                                //     {
-                                                //         "Order ID": "2",
-                                                //         "Name": "Asp.Net 4 Blue Book",
-                                                //         "Category": "Programming",
-                                                //         "Price": "56.00"
-                                                //     },
-                                                //     {
-                                                //         "Order ID": "3",
-                                                //         "Name": "Popular Science",
-                                                //         "Category": "Science",
-                                                //         "Price": "210.40"
-                                                //     }
-                                                // ]
+                                                // Put request  
+                                                var o1;
+                                                function reqListener() {
+                                                    o1 = JSON.parse(this.responseText);
+                                                    console.log(o1);
+                                                    document.getElementById("hotel_id").value = o1.a;
+                                                }
+
+                                                var url = `http://localhost:8080/waiter/${waiter_id}`;
+
+                                                var data = {};
+                                                data.status = false;
+                                                var json = JSON.stringify(data);
+
+                                                var xhr = new XMLHttpRequest();
+                                                xhr.open("PUT", url, true);
+                                                xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+                                                xhr.onload = function () {
+                                                    var users = JSON.parse(xhr.responseText);
+                                                    if (xhr.readyState == 4 && xhr.status == "200") {
+                                                        var url = `http://localhost:8080/chef/${chef_id}`;
+
+                                                        var data = {};
+                                                        data.order_id = o.order_id;
+                                                        var json = JSON.stringify(data);
+
+                                                        var xhr = new XMLHttpRequest();
+                                                        xhr.open("PUT", url, true);
+                                                        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+                                                        xhr.onload = function () {
+                                                            var users = JSON.parse(xhr.responseText);
+                                                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                                                console.table(users);
+                                                                alert("Orders Placed");
+                                                            } else {
+                                                                console.error(users);
+                                                            }
+                                                        }
+                                                        xhr.send(json);
+                                                    } else {
+                                                        console.error(users);
+                                                    }
+                                                }
+                                                xhr.send(json);
+
+                                                // Put request ends 
+
+
+
+                                                var myBooks = [
+                                                    {
+                                                        "Order ID": "1",
+                                                        "Name": "Computer Architecture",
+                                                        "Category": "Computers",
+                                                        "Price": "125.60"
+                                                    },
+                                                    {
+                                                        "Order ID": "2",
+                                                        "Name": "Asp.Net 4 Blue Book",
+                                                        "Category": "Programming",
+                                                        "Price": "56.00"
+                                                    },
+                                                    {
+                                                        "Order ID": "3",
+                                                        "Name": "Popular Science",
+                                                        "Category": "Science",
+                                                        "Price": "210.40"
+                                                    }
+                                                ]
 
                                                 // EXTRACT VALUE FOR HTML HEADER. 
                                                 // ('Book ID', 'Book Name', 'Category' and 'Price')
@@ -935,7 +992,7 @@
 
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", reqListener);
-        oReq.open("GET", "http://3.16.56.169:8080/menus");
+        oReq.open("GET", "http://127.0.0.1:8080/menus");
         oReq.send();
     </script>
 

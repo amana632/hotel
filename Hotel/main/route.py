@@ -108,10 +108,6 @@ def add_hotels():
 
     db.session.add(new_hotel)
     db.session.commit()
-<<<<<<< HEAD
-
-=======
->>>>>>> c77ab6c7686700088dac80949ac043f7b06aabaf
 
 # endpoint to show all hotelss
 @app.route("/hotels", methods=["GET"])
@@ -375,9 +371,6 @@ def make_payment():
 
 
 
-<<<<<<< HEAD
-# update ki apis
-=======
 
 #update ki apis
 
@@ -410,15 +403,45 @@ def order_karo():
 
 
 
+# waiter status ki api
+@app.route("/bookingid/<user_id>", methods=["GET"])
+def bookingid(user_id):
+    all_id = Booking.query.filter_by(user_id=user_id).all()
+    result = bookings_schema.dump(all_id)
+
+    return jsonify(a=result.data)
+
+
+# user id ke corresponding chef
+@app.route("/chef/<user_id>", methods=["GET"])
+def chef(user_id):
+    all_id = Chef.query.filter_by(user_id=user_id).all()
+    result = chefs_schema.dump(all_id)
+
+    return jsonify(a=result.data)
+
+
+# user id ke corresponding waiter
+@app.route("/waiter/<user_id>", methods=["GET"])
+def waiter(user_id):
+    all_id = Waiter.query.filter_by(user_id=user_id).all()
+    result = waiters_schema.dump(all_id)
+
+    return jsonify(a=result.data)
+
+# order id ke orresponding order ayega
+@app.route("/order/<order_id>", methods=["GET"])
+def order(order_id):
+    all_id = Order.query.filter_by(order_id=order_id).all()
+    result = orders_schema.dump(all_id)
+
+    return jsonify(a=result.data)
 
 
 
 
 
 
-
-
->>>>>>> c77ab6c7686700088dac80949ac043f7b06aabaf
 
 
 # heatmap ki api
@@ -428,3 +451,34 @@ def table_detail(hotel_id):
     result = tables_schema.dump(all_table)
 
     return jsonify(a=result.data)
+
+
+
+#put requests
+# endpoint to update waiter
+@app.route("/updateWaiter/<waiter_id>", methods=["PUT"])
+def waiter_update(waiter_id):
+    waiter = Waiter.query.get(waiter_id)
+
+    order_id = request.form['order_id']
+    waiter_status = request.form['waiter_status']
+
+    waiter.order_id = order_id
+    waiter.waiter_status = waiter_status
+
+    db.session.commit()
+    return waiter_schema.jsonify(waiter)
+
+# endpoint to update chef
+@app.route("/updateChef/<chef_id>", methods=["PUT"])
+def chef_update(chef_id):
+    chef = Chef.query.get(chef_id)
+
+    order_id = request.form['order_id']
+    waiter_status = request.form['waiter_status']
+
+    chef.order_id = order_id
+    chef.waiter_status = waiter_status
+
+    db.session.commit()
+    return chef_schema.jsonify(chef)
