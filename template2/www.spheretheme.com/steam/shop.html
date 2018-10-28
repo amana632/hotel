@@ -313,7 +313,16 @@
 
                                     alert("Item Added Successfully");
 
+                                    var o;
+                                    function reqListener() {
+                                        o = JSON.parse(this.responseText);
+                                        console.log(o);
+                                        document.getElementById("hotel_id").value = o.a;
 
+                                    var oReq = new XMLHttpRequest();
+                                    oReq.addEventListener("load", reqListener);
+                                    oReq.open("GET", `http://127.0.0.1:8080/hotelid/${user_id}`);
+                                    oReq.send();
 
                                     // console.log(x);
                                     // // YAHA par data kaise jaega
@@ -772,55 +781,6 @@
                                                 oReq.addEventListener("load", reqListener);
                                                 oReq.open("GET", `http://127.0.0.1:8080/order${user_id}`);
                                                 oReq.send();
-
-                                                // Put request  
-                                                var o1;
-                                                function reqListener() {
-                                                    o1 = JSON.parse(this.responseText);
-                                                    console.log(o1);
-                                                    document.getElementById("hotel_id").value = o1.a;
-                                                }
-
-                                                var url = `http://localhost:8080/waiter/${waiter_id}`;
-
-                                                var data = {};
-                                                data.status = false;
-                                                var json = JSON.stringify(data);
-
-                                                var xhr = new XMLHttpRequest();
-                                                xhr.open("PUT", url, true);
-                                                xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-                                                xhr.onload = function () {
-                                                    var users = JSON.parse(xhr.responseText);
-                                                    if (xhr.readyState == 4 && xhr.status == "200") {
-                                                        var url = `http://localhost:8080/chef/${chef_id}`;
-
-                                                        var data = {};
-                                                        data.order_id = o.order_id;
-                                                        var json = JSON.stringify(data);
-
-                                                        var xhr = new XMLHttpRequest();
-                                                        xhr.open("PUT", url, true);
-                                                        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-                                                        xhr.onload = function () {
-                                                            var users = JSON.parse(xhr.responseText);
-                                                            if (xhr.readyState == 4 && xhr.status == "200") {
-                                                                console.table(users);
-                                                                alert("Orders Placed");
-                                                            } else {
-                                                                console.error(users);
-                                                            }
-                                                        }
-                                                        xhr.send(json);
-                                                    } else {
-                                                        console.error(users);
-                                                    }
-                                                }
-                                                xhr.send(json);
-
-                                                // Put request ends 
-
-
 
                                                 var myBooks = [
                                                     {

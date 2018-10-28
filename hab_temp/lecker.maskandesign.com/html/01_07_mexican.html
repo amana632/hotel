@@ -1634,6 +1634,7 @@
     <!-- Theme JS -->
     <script src="js/lecker_script.js"></script>
     <script>
+
         var o;
         function reqListener() {
             o = JSON.parse(this.responseText);
@@ -1695,7 +1696,12 @@
 
         function xhr() {
             var txt;
-
+            if (confirm("Table has been Booked! Continue with Ordering Food ??")) {
+                txt = "You pressed OK!";
+                window.location.href = '/home/amana632/Desktop/shubhaarambh/hotel/template2/www.spheretheme.com/steam/shop.html';
+            } else {
+                txt = "You pressed Cancel !";
+            }
             var o;
             function reqListener() {
                 o = JSON.parse(this.responseText);
@@ -1728,12 +1734,6 @@
             http.onreadystatechange = function () {//Call a function when the state changes.
                 if (http.readyState == 4 && http.status == 200) {
                     // alert(http.responseText);
-                    if (confirm("Table has been Booked! Continue with Ordering Food ??")) {
-                        txt = "You pressed OK!";
-                        window.location.href = '/home/amana632/Desktop/shubhaarambh/hotel/template2/www.spheretheme.com/steam/shop.html';
-                    } else {
-                        txt = "You pressed Cancel !";
-                    }
                 }
             }
             http.send(params);
